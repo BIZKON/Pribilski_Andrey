@@ -9,16 +9,9 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: false,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'cemonip.ru',
-        port: '',
-        pathname: '/**',
-      },
-    ],
+    unoptimized: true,
   },
-  output: 'standalone',
+  output: 'export',
   transpilePackages: ['motion'],
 };
 
