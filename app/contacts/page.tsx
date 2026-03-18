@@ -98,10 +98,9 @@ export default function ContactsPage() {
               <div className="pt-8 border-t border-white/10">
                 <h3 className="text-xl font-bold mb-4">Реквизиты компании</h3>
                 <div className="text-sm text-text-muted space-y-2 font-mono">
-                  <p>ООО «ЦЕМОНИП»</p>
-                  <p>ИНН: 7700000000</p>
-                  <p>ОГРН: 1237700000000</p>
-                  <p>КПП: 770001001</p>
+                  <p>ИП Прибыльский Андрей Вацлавович</p>
+                  <p>ИНН: уточняйте по запросу</p>
+                  <p>ОГРНИП: уточняйте по запросу</p>
                 </div>
               </div>
             </div>
@@ -145,7 +144,7 @@ export default function ContactsPage() {
                 </div>
                 
                 <div className="text-xs text-text-muted">
-                  Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#" className="text-gold-main hover:underline">Политикой обработки персональных данных</a>.
+                  Нажимая кнопку «Отправить», вы соглашаетесь с <a href="/personal-data" className="text-gold-main hover:underline">Политикой обработки персональных данных</a>.
                 </div>
 
                 <Button type="button" size="lg" className="w-full">
@@ -160,11 +159,11 @@ export default function ContactsPage() {
 
       {/* MAP SECTION (Placeholder) */}
       <section className="h-[400px] glass-panel relative flex items-center justify-center">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://picsum.photos/seed/map/1920/1080')] bg-cover bg-center grayscale" />
+        <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-gold-main/20 to-transparent" />
         <div className="relative z-10 text-center">
           <MapPin className="w-12 h-12 text-gold-main mx-auto mb-4" />
           <h3 className="text-2xl font-sans font-bold mb-2">Ждем вас в нашем офисе</h3>
-          <p className="text-text-muted">Москва-Сити, Башня Федерация</p>
+          <p className="text-text-muted">г. Москва, ул. Каргопольская, д. 6</p>
         </div>
       </section>
     </div>

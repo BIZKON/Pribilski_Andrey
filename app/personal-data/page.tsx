@@ -1,15 +1,16 @@
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
+export const metadata = {
+  title: 'Положение о персональных данных | ЦЕМОНИП',
+  description: 'Положение об обработке персональных данных ИП Прибыльский А.В.',
+};
+
 export default function PersonalDataPage() {
   return (
-    <main className="min-h-screen bg-navy-deep text-text-main font-sans selection:bg-gold-main/30">
-      <Navbar />
-      
-      <div className="pt-32 pb-24">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+    <div className="flex flex-col min-h-screen gap-6 md:gap-8">
+      <section className="glass-panel p-8 md:p-12">
+        <div className="container mx-auto max-w-4xl">
           <Link href="/" className="inline-flex items-center text-text-muted hover:text-gold-main transition-colors mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
             На главную
@@ -246,9 +247,7 @@ export default function PersonalDataPage() {
             </div>
           </div>
         </div>
-      </div>
-      
-      <Footer />
-    </main>
+      </section>
+    </div>
   );
 }

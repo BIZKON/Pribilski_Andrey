@@ -1,22 +1,22 @@
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
+export const metadata = {
+  title: 'Договор оферты | ЦЕМОНИП',
+  description: 'Договор оферты на оказание консультационных юридических услуг.',
+};
+
 export default function OfferPage() {
   return (
-    <main className="min-h-screen bg-navy-deep text-text-main font-sans selection:bg-gold-main/30">
-      <Navbar />
-      
-      <div className="pt-32 pb-24">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+    <div className="flex flex-col min-h-screen gap-6 md:gap-8">
+      <section className="glass-panel p-8 md:p-12">
+        <div className="container mx-auto max-w-4xl">
           <Link href="/" className="inline-flex items-center text-text-muted hover:text-gold-main transition-colors mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
             На главную
           </Link>
           
-          <div className="glass-panel p-8 md:p-12">
-            <h1 className="text-3xl md:text-4xl font-sans font-bold mb-12 text-center">ДОГОВОР ОФЕРТЫ</h1>
+          <h1 className="text-3xl md:text-4xl font-sans font-bold mb-12 text-center">ДОГОВОР ОФЕРТЫ</h1>
             
             <div className="space-y-8 text-text-muted leading-relaxed">
               <section>
@@ -106,9 +106,7 @@ export default function OfferPage() {
             </div>
           </div>
         </div>
-      </div>
-      
-      <Footer />
-    </main>
+      </section>
+    </div>
   );
 }
