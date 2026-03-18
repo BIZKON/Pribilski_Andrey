@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-deep: #000000;
+  --color-navy-card: rgba(255, 255, 255, 0.05);
+  --color-navy-section: transparent;
+  
+  --color-gold-main: #007aff; /* Apple blue */
+  --color-gold-light: #5ac8fa;
+  --color-gold-dim: rgba(0, 122, 255, 0.15);
+  
+  --color-text-main: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  --color-text-dim: rgba(255, 255, 255, 0.4);
+
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-raleway);
+  --font-mono: var(--font-jetbrains);
+}
+
+@layer base {
+  body {
+    @apply bg-black text-text-main font-sans antialiased;
+    background-color: #000;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .gold-gradient-line {
+    background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+    height: 1px;
+    width: 100%;
+  }
+  
+  .glass-nav {
+    @apply bg-[#cd7f32]/5 backdrop-blur-3xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+  }
+
+  .glass-panel {
+    @apply bg-[#cd7f32]/5 backdrop-blur-3xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-[2.5rem] overflow-hidden;
+  }
+
+  .glass-card {
+    @apply bg-[#cd7f32]/10 backdrop-blur-xl border border-white/10 shadow-lg rounded-3xl transition-colors hover:bg-[#cd7f32]/15;
+  }
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+@keyframes gradient-pulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-blob {
+  animation: blob 10s infinite alternate;
+}
+.animate-gradient-pulse {
+  animation: gradient-pulse 3s ease infinite;
+  background-size: 200% auto;
+}
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
