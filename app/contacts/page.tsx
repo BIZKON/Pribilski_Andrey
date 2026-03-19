@@ -95,7 +95,7 @@ export default function ContactsPage() {
                 </div>
               </div>
 
-              <div className="pt-8 border-t border-white/10">
+              <div className="pt-8 border-t border-[var(--border-main)]">
                 <h3 className="text-xl font-bold mb-4">Реквизиты компании</h3>
                 <div className="text-sm text-text-muted space-y-2 font-mono">
                   <p>ИП Прибыльский Андрей Вацлавович</p>

@@ -58,7 +58,7 @@ export default function MonitoringPage() {
               { icon: Search, title: "Вы хотите пресечь «паразитирование»", desc: "Своевременно выявлять сайты, домены или фирменные наименования, сходные с вашими." },
               { icon: Clock, title: "Вы цените своё время", desc: "Предпочитаете получать готовые отчёты вместо часов самостоятельного поиска." }
             ].map((item, i) => (
-              <div key={i} className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 flex flex-col md:flex-row gap-4 md:gap-6">
+              <div key={i} className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-[var(--border-main)] flex flex-col md:flex-row gap-4 md:gap-6">
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl md:rounded-3xl bg-gold-main/10 flex items-center justify-center shrink-0">
                   <item.icon className="w-5 h-5 md:w-6 md:h-6 text-gold-main" />
                 </div>
@@ -78,7 +78,7 @@ export default function MonitoringPage() {
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <SectionHeader label="Объекты" title="Что мы отслеживаем?" />
           
-          <div className="glass-card rounded-3xl border border-white/5 p-8 md:p-12">
+          <div className="glass-card rounded-3xl border border-[var(--border-main)] p-8 md:p-12">
             <ul className="space-y-6">
               {[
                 "Товарные знаки и знаки обслуживания",
@@ -111,7 +111,7 @@ export default function MonitoringPage() {
               { title: "Доменные имена", desc: "Мониторинг регистраций в зонах .ru, .рф, .com, .net и др. Фиксируем домены с вашим ТЗ для предотвращения киберсквоттинга." },
               { title: "Рыночные и регистрационные данные", desc: "Анализ ЕГРЮЛ на предмет юрлиц с сходными наименованиями. При необходимости — мониторинг офлайн-рынка с контрольными закупками." }
             ].map((item, i) => (
-              <div key={i} className="glass-card p-8 rounded-3xl border border-white/5 hover:border-gold-main/30 transition-colors">
+              <div key={i} className="glass-card p-8 rounded-3xl border border-[var(--border-main)] hover:border-gold-main/30 transition-colors">
                 <h3 className="text-2xl font-sans font-bold mb-4 text-gold-main">{item.title}</h3>
                 <p className="text-text-muted leading-relaxed">{item.desc}</p>
               </div>
@@ -134,7 +134,7 @@ export default function MonitoringPage() {
               { title: "Правовой анализ и рекомендации", desc: "разъяснение по каждому факту: является ли нарушением, насколько опасно, способы реагирования." },
               { title: "Консультирование", desc: "ответы на вопросы по результатам отчётов в течение всего срока договора." }
             ].map((item, i) => (
-              <div key={i} className="flex gap-6 items-start glass-card p-6 rounded-2xl border border-white/5">
+              <div key={i} className="flex gap-6 items-start glass-card p-6 rounded-2xl border border-[var(--border-main)]">
                 <div className="text-2xl font-mono font-bold text-gold-main/50 mt-1">0{i + 1}</div>
                 <div>
                   <h4 className="text-lg font-bold mb-1">{item.title}</h4>
@@ -160,8 +160,8 @@ export default function MonitoringPage() {
               { title: "Заключите договор", desc: "Согласуем программу мониторинга, пакет услуг и подписываем договор. После оплаты — работа." },
               { title: "Получайте отчёты", desc: "Ежемесячно на почту готовый отчёт, при критичных угрозах — оперативное уведомление." }
             ].map((item, i) => (
-              <div key={i} className="relative glass-card p-8 rounded-3xl border border-white/5 text-center z-10">
-                <div className="w-16 h-16 mx-auto bg-white/5 border border-gold-main/30 rounded-full flex items-center justify-center mb-6 text-xl font-bold text-gold-main">
+              <div key={i} className="relative glass-card p-8 rounded-3xl border border-[var(--border-main)] text-center z-10">
+                <div className="w-16 h-16 mx-auto bg-[var(--bg-card)] border border-gold-main/30 rounded-full flex items-center justify-center mb-6 text-xl font-bold text-gold-main">
                   {i + 1}
                 </div>
                 <h3 className="text-xl font-sans font-bold mb-4">{item.title}</h3>

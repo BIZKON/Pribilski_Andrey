@@ -58,7 +58,7 @@ export default function DeadlinesPage() {
               { icon: Clock, title: "Тем, кто ценит безопасность", desc: "Вы понимаете, что потеря бренда обойдется дороже, чем абонентское обслуживание портфеля." },
               { icon: Calendar, title: "Международному бизнесу", desc: "Ваши товарные знаки зарегистрированы в разных странах по Мадридской системе или национальным процедурам. Сроки везде разные." }
             ].map((item, i) => (
-              <div key={i} className="glass-card p-8 rounded-3xl border border-white/5 flex gap-6">
+              <div key={i} className="glass-card p-8 rounded-3xl border border-[var(--border-main)] flex gap-6">
                 <div className="w-12 h-12 rounded-3xl bg-gold-main/10 flex items-center justify-center shrink-0">
                   <item.icon className="w-6 h-6 text-gold-main" />
                 </div>
@@ -85,7 +85,7 @@ export default function DeadlinesPage() {
               { title: "Поддержание патентов", desc: "Ежегодный контроль и уплата патентных пошлин за поддержание в силе патентов на изобретения, полезные модели и промышленные образцы." },
               { title: "Внесение изменений", desc: "Оперативное внесение изменений в реестры при смене наименования, адреса правообладателя или передаче прав (договоры отчуждения, лицензии, франчайзинг)." }
             ].map((item, i) => (
-              <div key={i} className="glass-card p-8 rounded-3xl border border-white/5 hover:border-gold-main/30 transition-colors">
+              <div key={i} className="glass-card p-8 rounded-3xl border border-[var(--border-main)] hover:border-gold-main/30 transition-colors">
                 <h3 className="text-2xl font-sans font-bold mb-4 text-gold-main">{item.title}</h3>
                 <p className="text-text-muted leading-relaxed">{item.desc}</p>
               </div>
@@ -108,7 +108,7 @@ export default function DeadlinesPage() {
               { title: "Оформление документов", desc: "После вашего подтверждения мы готовим все документы, оплачиваем пошлины и подаем заявления в Роспатент." },
               { title: "Получение результата", desc: "Контролируем процесс до получения официального подтверждения от ведомства (приложения к свидетельству)." }
             ].map((item, i) => (
-              <div key={i} className="flex gap-6 items-start glass-card p-6 rounded-2xl border border-white/5">
+              <div key={i} className="flex gap-6 items-start glass-card p-6 rounded-2xl border border-[var(--border-main)]">
                 <div className="text-2xl font-mono font-bold text-gold-main/50 mt-1">0{i + 1}</div>
                 <div>
                   <h4 className="text-lg font-bold mb-1">{item.title}</h4>

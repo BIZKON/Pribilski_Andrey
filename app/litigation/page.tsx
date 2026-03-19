@@ -58,7 +58,7 @@ export default function LitigationPage() {
               { icon: FileText, title: "Отказ Роспатента", desc: "Роспатент отказал в регистрации вашего товарного знака или выдаче патента. Необходимо оспорить решение в Палате по патентным спорам (ППС)." },
               { icon: Gavel, title: "Недобросовестная конкуренция", desc: "Конкурент зарегистрировал ваш бренд на себя (киберсквоттинг, патентный троллинг) или использует методы, вводящие потребителей в заблуждение. Обращение в ФАС." }
             ].map((item, i) => (
-              <div key={i} className="glass-card p-8 rounded-3xl border border-white/5 flex gap-6">
+              <div key={i} className="glass-card p-8 rounded-3xl border border-[var(--border-main)] flex gap-6">
                 <div className="w-12 h-12 rounded-3xl bg-gold-main/10 flex items-center justify-center shrink-0">
                   <item.icon className="w-6 h-6 text-gold-main" />
                 </div>
@@ -85,7 +85,7 @@ export default function LitigationPage() {
               { title: "Палата по патентным спорам (ППС)", desc: "Оспаривание отказов в регистрации ТЗ. Подача возражений против предоставления правовой охраны товарным знакам и патентам к��нкурентов." },
               { title: "Федеральная антимонопольная служба (ФАС)", desc: "Подготовка заявлений о признании действий конкурента актом недобросовестной конкуренции (статья 14.4 Закона о защите конкуренции)." }
             ].map((item, i) => (
-              <div key={i} className="flex gap-6 items-start glass-card p-6 rounded-2xl border border-white/5 hover:border-gold-main/30 transition-colors">
+              <div key={i} className="flex gap-6 items-start glass-card p-6 rounded-2xl border border-[var(--border-main)] hover:border-gold-main/30 transition-colors">
                 <div className="text-2xl font-mono font-bold text-gold-main/50 mt-1">0{i + 1}</div>
                 <div>
                   <h4 className="text-xl font-bold mb-2 text-gold-main">{item.title}</h4>
@@ -103,7 +103,7 @@ export default function LitigationPage() {
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <SectionHeader label="Состав услуги" title="Что входит в ведение дела?" />
           
-          <div className="glass-card rounded-3xl border border-white/5 p-8 md:p-12">
+          <div className="glass-card rounded-3xl border border-[var(--border-main)] p-8 md:p-12">
             <ul className="space-y-6">
               {[
                 "Анализ ситуации и оценка судебных перспектив (бесплатно на первой консультации)",

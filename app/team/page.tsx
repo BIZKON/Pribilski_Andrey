@@ -12,7 +12,7 @@ export default function TeamPage() {
     {
       name: "Прибыльский Андрей Вацлавович",
       role: "Руководитель проекта. Патентный поверенный РФ №1554 (аттестован с 2013 г.)",
-      image: "https://cemonip.ru/gallery_gen/2661aed3941aa101abfaa07f02122c13_480x480_4x0_484x483_crop.jpg",
+      image: "/images/team-pribylskiy.jpg",
       bio: "Работает в сфере ИС с 2006 года. Зарегистрировано более 3 500 объектов интеллектуальной собственности. Входит в ТОП-10 рейтинга Роспатента по количеству поданных заявок на регистрацию товарных знаков. Начал карьеру в Следственном комитете РФ, затем работал в патентно-юридических фирмах и российском представительстве крупной иностранной компании.",
       expertise: ["Патентные споры", "Международная регистрация", "Стратегия защиты ИС"],
       contacts: { email: "info@cemonip.ru", phone: "+7 (495) 532-23-57" },
@@ -21,7 +21,7 @@ export default function TeamPage() {
     {
       name: "Васильев Сергей Анатольевич",
       role: "Юрист. Эксперт по регистрации и защите ИС",
-      image: "https://cemonip.ru/gallery_gen/0b27443ba82200a24f04f49248b0549d_480x480_fit.jpg",
+      image: "/images/team-mosinskiy.jpg",
       bio: "Успешно провел множество дел в Суде по интеллектуальным правам и арбитражных судах. Эксперт по защите авторских прав в интернете и спорам о недобросовестной конкуренции.",
       expertise: ["Судебное представительство", "Авторское право", "Антимонопольные споры"],
       contacts: { email: "info@cemonip.ru", phone: "+7 (495) 532-23-57" }
@@ -29,7 +29,7 @@ export default function TeamPage() {
     {
       name: "Мосинский Александр Александрович",
       role: "Руководитель судебного отдела",
-      image: "https://cemonip.ru/gallery_gen/ac052cb168e497bbe133afa1b7857c7f_480x480_fit.jpg",
+      image: "/images/team-vasiliev.jpg",
       bio: "Специалист по выявлению нарушений в интернете и на маркетплейсах. Разработал эффективные методики поиска контрафакта и защиты прав в судебном порядке.",
       expertise: ["Мониторинг нарушений", "Защита на маркетплейсах", "Доменные споры"],
       contacts: { email: "info@cemonip.ru", phone: "+7 (495) 532-23-57" }
@@ -87,14 +87,14 @@ export default function TeamPage() {
                     <h4 className="text-xs font-mono text-gold-main/70 uppercase tracking-wider mb-3">Специализация</h4>
                     <div className="flex flex-wrap gap-2">
                       {member.expertise.map((exp, j) => (
-                        <span key={j} className="text-xs bg-white/5 border border-white/10 px-2 py-1 rounded text-text-main">
+                        <span key={j} className="text-xs bg-[var(--bg-card)] border border-[var(--border-main)] px-2 py-1 rounded text-text-main">
                           {exp}
                         </span>
                       ))}
                     </div>
                   </div>
                   
-                  <div className="pt-4 border-t border-white/10 flex flex-col gap-2">
+                  <div className="pt-4 border-t border-[var(--border-main)] flex flex-col gap-2">
                     {member.link && (
                       <a href={member.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gold-main hover:text-gold-main/80 transition-colors mb-2">
                         Проверить на Роспатенте <ArrowRight className="w-4 h-4" />
@@ -127,14 +127,14 @@ export default function TeamPage() {
           <div className="mb-16">
             <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 md:gap-x-12">
               {['Банк ЗЕНИТ', 'Bank NBT', 'АНО «Лига мечты»', 'ННПФ', 'СкайТрак', 'Открытые документы', 'A Wish', 'МОНОТЕКСТРОЙ', 'ПРОЗДОРОВЬЕ', 'Страховая компания «Турикум»'].map((client, i) => (
-                <span key={i} className="text-lg md:text-xl font-serif font-bold text-text-main/50 hover:text-text-main transition-colors cursor-default">
+                <span key={i} className="text-lg md:text-xl font-serif font-bold text-text-dim hover:text-text-main transition-colors cursor-default">
                   {client}
                 </span>
               ))}
             </div>
           </div>
 
-          <div className="mt-16 pt-12 border-t border-white/5">
+          <div className="mt-16 pt-12 border-t border-[var(--border-main)]">
             <h4 className="text-center text-sm text-text-muted uppercase tracking-wider mb-8">Благодарственные письма</h4>
             <div className="flex overflow-x-auto pb-8 -mx-4 px-4 md:mx-0 md:px-0 gap-6 snap-x hide-scrollbar">
               {[
@@ -152,11 +152,11 @@ export default function TeamPage() {
                     <span className="inline-block px-3 py-1 rounded-full border border-gold-main/20 text-gold-main font-mono text-xs">{item.type}</span>
                   </div>
                   
-                  <p className="font-sans italic text-[15px] text-text-main/70 leading-relaxed mb-8 flex-grow">
+                  <p className="font-sans italic text-[15px] text-text-muted leading-relaxed mb-8 flex-grow">
                     «{item.quote}»
                   </p>
                   
-                  <div className="font-mono text-xs text-text-muted mt-auto pt-4 border-t border-white/5">
+                  <div className="font-mono text-xs text-text-muted mt-auto pt-4 border-t border-[var(--border-main)]">
                     {item.author}
                   </div>
                 </div>
