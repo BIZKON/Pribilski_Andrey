@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -7,9 +8,13 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 mb-8 md:mb-16">
           <div className="col-span-2 md:col-span-1 flex flex-col gap-4 md:gap-6 items-center text-center md:items-center md:text-center">
             <Link href="/" className="flex items-center gap-2 md:gap-3 group">
-              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gold-main/10 border border-gold-main/30 flex items-center justify-center group-hover:border-gold-main transition-colors">
-                <span className="font-sans font-bold text-gold-main text-base md:text-xl">IP</span>
-              </div>
+              <Image 
+                src="/images/logo.png" 
+                alt="ЦЕМОНИП" 
+                width={40} 
+                height={40} 
+                className="w-8 h-8 md:w-10 md:h-10 object-contain"
+              />
               <span className="font-sans font-bold text-lg md:text-xl tracking-wide text-text-main">ЦЕМОНИП</span>
             </Link>
             <p className="text-text-muted text-xs md:text-sm leading-relaxed max-w-xs">

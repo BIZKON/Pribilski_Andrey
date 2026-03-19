@@ -39,7 +39,7 @@ export default function Home() {
                 </Button>
               </div>
               
-              <div className="grid grid-cols-2 gap-4 md:gap-6 pt-8 border-t border-white/10">
+              <div className="grid grid-cols-2 gap-4 md:gap-6 pt-8 border-t border-[var(--border-main)]">
                 <div className="text-center md:text-left">
                   <div className="text-2xl md:text-3xl font-sans font-bold text-gold-main mb-1">3 500+</div>
                   <div className="text-[10px] md:text-xs text-text-muted uppercase tracking-wider">объектов ИС зарегистрировано</div>
@@ -78,12 +78,12 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {[
-              { icon: Search, title: "На маркетплейсе продают подделки под вашим брендом", desc: "Контрафакт размывает репутацию и забирает вашу прибыль. Каждый день промедления — потерянные деньги." },
+              { icon: Search, title: "На маркетплейсе продают подделки под вашим брендом", desc: "Контрафакт размывает репутацию и забирает прибыль. Каждый день промедления - потерянные деньги." },
               { icon: Clock, title: "Вы не уверены, когда истекает срок вашего товарного знака", desc: "Пропуск срока продления = потеря бренда. Восстановление стоит в разы дороже, чем контроль." },
               { icon: Scale, title: "Конкурент зарегистрировал обозначение, похожее на ваше", desc: "Чем дольше он работает под сходным знаком, тем сложнее доказать ваш приоритет." },
               { icon: FileText, title: "Вы получили претензию о нарушении чужих прав", desc: "Без профессиональной защиты штраф может достигать 5 миллионов рублей за каждый случай." }
             ].map((item, i) => (
-              <div key={i} className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-gold-main/50 transition-colors group">
+              <div key={i} className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl hover:border-gold-main/50 transition-colors group">
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl md:rounded-3xl bg-gold-main/10 flex items-center justify-center mb-4 md:mb-6 group-hover:bg-gold-main/20 transition-colors">
                   <item.icon className="w-5 h-5 md:w-6 md:h-6 text-gold-main" />
                 </div>
@@ -187,7 +187,7 @@ export default function Home() {
       </section>
 
       {/* TOOLS AND DATABASES SECTION */}
-      <section className="py-12 md:py-24 bg-[#0a0e1a] relative">
+      <section className="py-12 md:py-24 bg-[var(--bg-section)] relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
@@ -208,7 +208,7 @@ export default function Home() {
               { icon: <Search className="w-6 h-6 text-gold-main" />, name: "PATENTSCOPE (WIPO)", desc: "Глобальная база патентных документов ВОИС. Поиск по миллионам патентов из 100+ стран мира.", url: "wipo.int/patentscope/", tag: "Поиск патентов" },
               { icon: <Search className="w-6 h-6 text-gold-main" />, name: "Espacenet (EPO)", desc: "Европейская база патентных документов. Доступ к более чем 150 миллионам патентных документов по всему миру.", url: "worldwide.espacenet.com", tag: "Поиск патентов" }
             ].map((item, i) => (
-              <div key={i} className="bg-[#141c2b] p-5 md:p-8 rounded-xl border border-[rgba(200,160,74,0.08)] hover:-translate-y-1 hover:border-gold-main/30 transition-all duration-300 flex flex-col group">
+              <div key={i} className="bg-[var(--bg-card)] p-5 md:p-8 rounded-xl border border-[rgba(200,160,74,0.08)] hover:-translate-y-1 hover:border-gold-main/30 transition-all duration-300 flex flex-col group">
                 <div className="flex items-start justify-between mb-3 md:mb-4 gap-2">
                   <div className="text-2xl md:text-3xl">{item.icon}</div>
                   <span className="px-2 md:px-3 py-1 rounded-full border border-gold-main/15 text-gold-main font-mono text-[10px] md:text-[11px] uppercase tracking-wider shrink-0">{item.tag}</span>
@@ -249,7 +249,7 @@ export default function Home() {
             
             <div className="space-y-6 md:space-y-12">
               {[
-                { step: "1", icon: MessageSquare, title: "Первичная консультация", time: "В течение 60 минут", desc: "Вы оставляете заявку на сайте или пишете на почту. Мы связываемся с вами для уточнения деталей: какие объекты нужно защитить, что вызывает беспокойство, какие цели вы преследуете.", result: "Понимание задачи и предварительная оценка", free: true },
+                { step: "1", icon: MessageSquare, title: "Первичная консультация", time: "В течение 60 минут", desc: "Вы оставляете заявку на сайте или пишете на почту. Мы связываемся с вами для уточнения деталей: какие объекты нужно защитить, что ��ызывает беспокойство, какие цели вы преследуете.", result: "Понимание задачи и предварительная оценка", free: true },
                 { step: "2", icon: Search, title: "Предварительная проверка", time: "1–8 часов", desc: "Проводим бесплатную проверку вашего объекта по открытым базам Роспатента, ВОИС, EUIPO, USPTO. Подбираем классы МКТУ. Оцениваем перспективы и риски.", result: "Отчёт о текущем состоянии ваших прав", tools: ["Роспатент", "WIPO", "Espacenet"], free: true },
                 { step: "3", icon: FileText, title: "Стратегия и договор", time: "1–2 рабочих дня", desc: "Разрабатываем индивидуальную стратегию защиты. Определяем пакет услуг, периодичность мониторинга, приоритетные направления. Согласуем стоимость и подписываем договор.", result: "Подписанный договор и план работ" },
                 { step: "4", icon: Search, title: "Мониторинг и работа", time: "Ежемесячно", desc: "Запускаем регулярный мониторинг по всем направлениям: патентные базы, маркетплейсы, доменные зоны, ЕГРЮЛ, социальные сети. При обнаружении угроз — немедленное уведомление.", result: "Ежемесячный отчёт с правовой оценкой", tools: ["Роспатент", "PATENTSCOPE", "Espacenet", "CNIPA", "USPTO"] },
@@ -325,7 +325,7 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS SECTION */}
-      <section className="py-12 md:py-24 bg-[#111827] relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-[var(--bg-section)] relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
@@ -337,11 +337,11 @@ export default function Home() {
           <div className="flex overflow-x-auto pb-6 md:pb-8 -mx-4 px-4 md:mx-0 md:px-0 gap-4 md:gap-6 snap-x hide-scrollbar">
             {[
               { name: "АО «Национальный негосударственный пенсионный фонд» (ННПФ)", type: "Регистрация товарного знака", quote: "Выражаем искреннюю благодарность за проявленный профессионализм и компетентность при регистрации товарного знака Фонда", author: "И.О. Акопджанова, Генеральный директор" },
-              { name: "АНО «Открытые документы»", type: "Регистрация товарного знака", quote: "Выражаем искреннюю благодарность лично Вам за качественно проделанную работу в рамках регистрации товарного знака «Открытые документы»", author: "А.С. Нескубин, Директор АНО" },
+              { name: "АНО «Открытые документы»", type: "Регистрация товарного знака", quote: "Выражаем искреннюю благодарность лично Вам за качественно проделанн��ю работу в рамках регистрации товарного знака «Открытые документы»", author: "А.С. Нескубин, Директор АНО" },
               { name: "ООО «СкайТрак» (SKYTRUCK)", type: "Комплексное сопровождение", quote: "Выражаем благодарность и глубокую признательность за плодотворное сотрудничество с нашей молодой компанией", author: "С.А. Якимов, Генеральный директор" },
               { name: "ИП Жукова В.В. / Магазин «A Wish»", type: "Защита бренда", quote: "Выражаем благодарность и глубокую признательность за плодотворное сотрудничество. Спасибо вам за это!", author: "Жукова В.В., 26 июля 2023 г." }
             ].map((item, i) => (
-              <div key={i} className="min-w-[280px] md:min-w-[400px] w-full max-w-[450px] bg-[#141c2b] p-5 md:p-8 rounded-2xl border border-[rgba(200,160,74,0.12)] relative hover:-translate-y-1 hover:border-gold-main/30 transition-all duration-300 snap-center flex flex-col">
+              <div key={i} className="min-w-[280px] md:min-w-[400px] w-full max-w-[450px] bg-[var(--bg-card)] p-5 md:p-8 rounded-2xl border border-[rgba(200,160,74,0.12)] relative hover:-translate-y-1 hover:border-gold-main/30 transition-all duration-300 snap-center flex flex-col">
                 <div className="absolute top-0 left-5 right-5 md:left-8 md:right-8 h-px bg-gradient-to-r from-transparent via-gold-main/50 to-transparent" />
                 <div className="text-gold-main/40 text-3xl md:text-4xl font-serif absolute top-4 md:top-6 left-4 md:left-6 leading-none">"</div>
                 
@@ -514,7 +514,7 @@ export default function Home() {
               { q: "У меня маленький бизнес с одним товарным знаком. Мне это нужно?", a: "Именно небольшие компании страдают от нарушений больше всего — у них нет юридического отдела. Один случай копирования на маркетплейсе может стоить вам половину оборота. Наш базовый пакет значительно дешевле последствий пропущенного нарушения." },
               { q: "Я могу сам следить за нарушениями.", a: "Профессиональный мониторинг охватывает источники, недоступные в обычном поиске: внутренние базы Роспатента, реестры доменных зон, ЕГРЮЛ, международные ведомства. Плюс мы фиксируем нарушения способом, который примет суд." },
               { q: "Сколько стоят ваши услуги?", a: "Стоимость зависит от количества объектов и объёма работы. Первичная консультация — бесплатно. Мы проведём анализ и назовём точную цену до подписания договора. Никаких скрытых платежей." },
-              { q: "Что если нарушитель в другом регионе или за рубежом?", a: "Мы работаем по всей России. Арбитражные суды рассматривают дела независимо от местонахождения сторон. Для международных споров привлекаем партнёров в соответствующих юрисдикциях." },
+              { q: "Что если нарушитель в другом регионе или за рубежом?", a: "Мы работаем по всей России. Арбитражные суды рассматривают дел�� независимо от местонахождения сторон. Для международных споров привлекаем партнёров в соответствующих юрисдикциях." },
               { q: "Какие гарантии результата?", a: "Мы не даём гарантий исхода суда — это было бы нечестно. Но мы даём честную оценку перспектив на старте и не берёмся за бесперспективные дела. 10 лет практики и поток клиентов по рекомендациям — наша лучшая гарантия." },
               { q: "Как быстро вы начнёте работать?", a: "Первичный анализ — 1-2 рабочих дня. Мониторинг запускается сразу после договора и оплаты. В экстренных ситуациях — подключаемся в тот же день." }
             ].map((faq, i) => (
