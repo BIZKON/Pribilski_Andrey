@@ -20,7 +20,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#cd7f32]/10 border border-white/10 mb-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#cd7f32]/10 border border-[var(--border-main)] mb-8">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                 <span className="text-xs font-mono text-text-muted">Патентные поверенные РФ • С 2016 года</span>
               </div>
@@ -121,8 +121,8 @@ export default function Home() {
               { href: "/deadlines", icon: Clock, title: "Контроль сроков действия", desc: "Системное отслеживание сроков и своевременная подача заявлений о продлении. Ни один актив не будет утрачен по формальной причине." }
             ].map((item, i) => (
               <Link key={i} href={item.href} className="block group">
-                <div className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-gold-main transition-all duration-300 h-full flex flex-col">
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[#cd7f32]/10 border border-white/10 flex items-center justify-center mb-4 md:mb-6 group-hover:border-gold-main/50 transition-colors">
+                <div className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-[var(--border-main)] hover:border-gold-main transition-all duration-300 h-full flex flex-col">
+                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[#cd7f32]/10 border border-[var(--border-main)] flex items-center justify-center mb-4 md:mb-6 group-hover:border-gold-main/50 transition-colors">
                     <item.icon className="w-6 h-6 md:w-7 md:h-7 text-gold-main" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-sans font-bold mb-3 md:mb-4 group-hover:text-gold-main transition-colors">{item.title}</h3>
@@ -258,7 +258,7 @@ export default function Home() {
               ].map((item, i) => (
                 <div key={i} className="relative">
                   {/* Mobile layout - simple card */}
-                  <div className="md:hidden glass-card p-5 rounded-2xl border border-white/5">
+                  <div className="md:hidden glass-card p-5 rounded-2xl border border-[var(--border-main)]">
                     <div className="flex items-center gap-3 mb-3">
                       <div className="w-8 h-8 rounded-full bg-gold-main text-navy-deep font-bold text-sm flex items-center justify-center shrink-0">
                         {item.step}
@@ -285,7 +285,7 @@ export default function Home() {
                     <div className="w-1/2" />
                     
                     <div className={`w-1/2 ${i % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
-                      <div className="glass-card p-8 rounded-3xl border border-white/5 hover:border-gold-main/30 transition-colors">
+                      <div className="glass-card p-8 rounded-3xl border border-[var(--border-main)] hover:border-gold-main/30 transition-colors">
                         <div className={`flex items-center gap-3 mb-4 ${i % 2 === 0 ? 'justify-end' : ''}`}>
                           <div className="w-10 h-10 rounded-xl bg-gold-main/10 flex items-center justify-center">
                             <item.icon className="w-5 h-5 text-gold-main" />
@@ -307,7 +307,7 @@ export default function Home() {
                           {item.tools && (
                             <div className={`flex flex-wrap gap-2 mt-2 ${i % 2 === 0 ? 'justify-end' : ''}`}>
                               {item.tools.map((tool, idx) => (
-                                <span key={idx} className="px-2 py-1 rounded-full border border-white/10 text-xs text-text-dim font-mono bg-white/5">
+                                <span key={idx} className="px-2 py-1 rounded-full border border-[var(--border-main)] text-xs text-text-dim font-mono bg-[var(--bg-card)]">
                                   {tool}
                                 </span>
                               ))}
@@ -390,15 +390,15 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-16">
             {[
               { 
-                img: "https://cemonip.ru/gallery_gen/2661aed3941aa101abfaa07f02122c13_480x480_4x0_484x483_crop.jpg", 
+                img: "/images/team-pribylskiy.jpg", 
                 name: "Прибыльский Андрей Вацлавович", 
                 role: "Руководитель проекта. Патентный поверенный РФ №1554 (аттестован с 2013 г.). Работает в сфере ИС с 2006 года. Зарегистрировано более 3 500 объектов интеллектуальной собственности. Входит в ТОП-10 рейтинга Роспатента по количеству поданных заявок на регистрацию товарных знаков. Начал карьеру в Следственном комитете РФ, затем работал в патентно-юридических фирмах и российском представительстве крупной иностранной компании.",
                 link: "https://rospatent.gov.ru/ru/patent-attorneys/1554"
               },
-              { img: "https://cemonip.ru/gallery_gen/0b27443ba82200a24f04f49248b0549d_480x480_fit.jpg", name: "Васильев Сергей Анатольевич", role: "Юрист. Эксперт по регистрации и защите объектов интеллектуальной собственности." },
-              { img: "https://cemonip.ru/gallery_gen/ac052cb168e497bbe133afa1b7857c7f_480x480_fit.jpg", name: "Мосинский Александр Александрович", role: "Руководитель судебного отдела." }
+              { img: "/images/team-mosinskiy.jpg", name: "Васильев Сергей Анатольевич", role: "Юрист. Эксперт по регистрации и защите объектов интеллектуальной собственности." },
+              { img: "/images/team-vasiliev.jpg", name: "Мосинский Александр Александрович", role: "Руководитель судебного отдела." }
             ].map((member, i) => (
-              <div key={i} className="glass-card rounded-3xl overflow-hidden border border-white/5 group flex flex-col">
+              <div key={i} className="glass-card rounded-3xl overflow-hidden border border-[var(--border-main)] group flex flex-col">
                 <div className="aspect-square relative overflow-hidden shrink-0">
                   <Image src={member.img} alt={member.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
                 </div>
@@ -406,7 +406,7 @@ export default function Home() {
                   <h3 className="text-xl font-sans font-bold mb-2">{member.name}</h3>
                   <p className="text-text-muted text-sm leading-relaxed flex-grow">{member.role}</p>
                   {member.link && (
-                    <div className="mt-4 pt-4 border-t border-white/5">
+                    <div className="mt-4 pt-4 border-t border-[var(--border-main)]">
                       <a href={member.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-xs font-medium text-gold-main hover:text-gold-main/80 transition-colors">
                         Проверить на Роспатенте <ArrowRight className="ml-1 w-3 h-3" />
                       </a>
@@ -423,7 +423,7 @@ export default function Home() {
               { title: "Эксперты по ИС", desc: "Патентные поиски, анализ сходства, заключения для суда." },
               { title: "Юристы-судебники", desc: "Арбитраж, СИП, ФАС. Взыскание компенсаций." }
             ].map((item, i) => (
-              <div key={i} className="bg-[#cd7f32]/5 p-6 rounded-2xl border border-white/5 text-center">
+              <div key={i} className="bg-[#cd7f32]/5 p-6 rounded-2xl border border-[var(--border-main)] text-center">
                 <h4 className="font-bold text-gold-main mb-2">{item.title}</h4>
                 <p className="text-sm text-text-muted">{item.desc}</p>
               </div>
@@ -444,13 +444,13 @@ export default function Home() {
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {/* Basic */}
-            <div className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 flex flex-col items-center text-center">
+            <div className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-[var(--border-main)] flex flex-col items-center text-center">
               <h3 className="text-xl md:text-2xl font-sans font-bold mb-2">Мониторинг</h3>
               <div className="text-2xl md:text-3xl font-bold text-gold-main mb-3 md:mb-4">от 15 000 <span className="text-base md:text-lg text-text-muted font-normal">₽/мес</span></div>
               <p className="text-text-muted mb-8">Регулярное наблюдение за патентными базами и реестрами. Для владельцев 1–3 товарных знаков.</p>
               <ul className="space-y-3 mb-8 flex-grow w-full flex flex-col items-center">
                 {['Ежемесячный мониторинг Роспатента', 'Мониторинг интернет-пространства', 'Мониторинг доменных имён', 'Отчёт с правовой оценкой', 'Консультирование по результатам'].map((li, i) => (
-                  <li key={i} className="w-full bg-[#cd7f32]/5 border border-white/10 rounded-full py-2.5 px-4 text-sm text-text-main text-center flex items-center justify-center min-h-[44px]">
+                  <li key={i} className="w-full bg-[#cd7f32]/5 border border-[var(--border-main)] rounded-full py-2.5 px-4 text-sm text-text-main text-center flex items-center justify-center min-h-[44px]">
                     {li}
                   </li>
                 ))}
@@ -470,7 +470,7 @@ export default function Home() {
               <p className="text-text-muted mb-8">Полный цикл: мониторинг + выявление нарушений + досудебная работа. Для активных брендов.</p>
               <ul className="space-y-3 mb-8 flex-grow w-full flex flex-col items-center">
                 {['Всё из пакета «Базовый»', 'Выявление фактов нарушений', 'Контрольные закупки и фиксация', 'Досудебное урегулирование', 'Контроль сроков действия', 'Telegram-бот напоминаний'].map((li, i) => (
-                  <li key={i} className="w-full bg-[#cd7f32]/5 border border-white/10 rounded-full py-2.5 px-4 text-sm text-text-main text-center flex items-center justify-center min-h-[44px]">
+                  <li key={i} className="w-full bg-[#cd7f32]/5 border border-[var(--border-main)] rounded-full py-2.5 px-4 text-sm text-text-main text-center flex items-center justify-center min-h-[44px]">
                     {li}
                   </li>
                 ))}
@@ -481,13 +481,13 @@ export default function Home() {
             </div>
             
             {/* Maximum */}
-            <div className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 flex flex-col items-center text-center">
+            <div className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-[var(--border-main)] flex flex-col items-center text-center">
               <h3 className="text-xl md:text-2xl font-sans font-bold mb-2">Судебная защита</h3>
               <div className="text-2xl md:text-3xl font-bold text-gold-main mb-3 md:mb-4">от 100 000 <span className="text-base md:text-lg text-text-muted font-normal">₽/проект</span></div>
               <p className="text-text-muted mb-8">Суды всех инстанций, взыскание компенсаций, исполнение решений.</p>
               <ul className="space-y-3 mb-8 flex-grow w-full flex flex-col items-center">
                 {['Разработка правовой стратегии', 'Подготовка процессуальных документов', 'Представительство в суде', 'Жалобы в ФАС и Роспатент', 'Исполнение судебных актов', 'Взыскание компенсаций'].map((li, i) => (
-                  <li key={i} className="w-full bg-[#cd7f32]/5 border border-white/10 rounded-full py-2.5 px-4 text-sm text-text-main text-center flex items-center justify-center min-h-[44px]">
+                  <li key={i} className="w-full bg-[#cd7f32]/5 border border-[var(--border-main)] rounded-full py-2.5 px-4 text-sm text-text-main text-center flex items-center justify-center min-h-[44px]">
                     {li}
                   </li>
                 ))}
@@ -539,7 +539,7 @@ export default function Home() {
               <p className="text-text-muted mb-4 md:mb-8 max-w-xl mx-auto text-sm md:text-lg">Бот @fees_prodlenie_bot — бесплатный инструмент. Напомнит о продлении ТЗ, сообщит о пошлинах, предоставит реквизиты.</p>
               <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-3 md:gap-4 w-full">
                 {['Напоминания', 'Реквизиты', 'Инструкции', 'Бесплатно'].map((tag, i) => (
-                  <span key={i} className="px-4 py-2 rounded-xl md:rounded-full bg-[#cd7f32]/10 border border-white/10 text-sm font-mono text-gold-main flex items-center justify-center">
+                  <span key={i} className="px-4 py-2 rounded-xl md:rounded-full bg-[#cd7f32]/10 border border-[var(--border-main)] text-sm font-mono text-gold-main flex items-center justify-center">
                     {tag}
                   </span>
                 ))}

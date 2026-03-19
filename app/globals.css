@@ -10,13 +10,13 @@
   --color-gold-light: #5ac8fa;
   --color-gold-dim: rgba(0, 122, 255, 0.15);
   
-  --color-text-main: #ffffff;
-  --color-text-muted: rgba(255, 255, 255, 0.6);
-  --color-text-dim: rgba(255, 255, 255, 0.4);
-  
-  --color-bg-main: #000000;
-  --color-bg-card: rgba(255, 255, 255, 0.05);
-  --color-border-main: rgba(255, 255, 255, 0.1);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-text-dim: var(--text-dim);
+
+  --color-bg-main: var(--bg-main);
+  --color-bg-card: var(--bg-card);
+  --color-border-main: var(--border-main);
 
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-raleway);

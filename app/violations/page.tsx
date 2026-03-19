@@ -59,7 +59,7 @@ export default function ViolationsPage() {
               { icon: Scale, text: "Готовите иск — нужна доказательная база" },
               { icon: CheckCircle, text: "Проводите аудит ИС — хотите реальную картину" }
             ].map((item, i) => (
-              <div key={i} className="glass-card p-6 rounded-3xl border border-white/5 flex flex-col items-center text-center gap-4">
+              <div key={i} className="glass-card p-6 rounded-3xl border border-[var(--border-main)] flex flex-col items-center text-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-gold-main/10 flex items-center justify-center">
                   <item.icon className="w-6 h-6 text-gold-main" />
                 </div>
@@ -84,7 +84,7 @@ export default function ViolationsPage() {
                   <th className="py-4 px-6 font-sans font-bold text-xl text-gold-main">Форма нарушения</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/5">
+              <tbody className="divide-y divide-[var(--border-main)]">
                 {[
                   { check: "Недобросовестная конкуренция", form: "Смешение, копирование упаковки, введение в заблуждение" },
                   { check: "Сходные обозначения", form: "ТЗ, вывески, обозначения, домены, логотипы" },
@@ -92,7 +92,7 @@ export default function ViolationsPage() {
                   { check: "Нарушения в рекламе и интернете", form: "Использование изображений, текстов, видео без разрешения" },
                   { check: "Нарушения в доменных именах", form: "Киберсквоттинг — регистрация доменов с вашим ТЗ" }
                 ].map((row, i) => (
-                  <tr key={i} className="hover:bg-white/5 transition-colors">
+                  <tr key={i} className="hover:bg-[var(--bg-card)] transition-colors">
                     <td className="py-4 px-6 font-medium text-text-main">{row.check}</td>
                     <td className="py-4 px-6 text-text-muted">{row.form}</td>
                   </tr>
@@ -115,7 +115,7 @@ export default function ViolationsPage() {
               { title: "Официальные источники", items: ["Реестры юридических лиц", "Реестры доменных имён", "Реестры товарных знаков"] },
               { title: "Офлайн", items: ["Розничные магазины", "Выставки", "Оптовые склады", "Контрольные закупки"] }
             ].map((block, i) => (
-              <div key={i} className="glass-card p-8 rounded-3xl border border-white/5">
+              <div key={i} className="glass-card p-8 rounded-3xl border border-[var(--border-main)]">
                 <h3 className="text-2xl font-sans font-bold mb-6 text-gold-main">{block.title}</h3>
                 <ul className="space-y-3">
                   {block.items.map((item, j) => (
@@ -144,7 +144,7 @@ export default function ViolationsPage() {
               "Процессуальная фиксация (скриншоты, закупки, видео, заключения)",
               "Отчёт с правовой оценкой"
             ].map((item, i) => (
-              <div key={i} className="glass-card p-6 rounded-3xl border border-white/5 flex items-center gap-4">
+              <div key={i} className="glass-card p-6 rounded-3xl border border-[var(--border-main)] flex items-center gap-4">
                 <div className="text-3xl font-sans font-bold text-gold-main/30">0{i + 1}</div>
                 <div className="text-lg font-medium">{item}</div>
               </div>
