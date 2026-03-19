@@ -12,16 +12,16 @@ export default function MonitoringPage() {
   return (
     <div className="flex flex-col min-h-screen gap-6 md:gap-8">
       {/* HERO SECTION */}
-      <section className="relative pt-20 pb-24 overflow-hidden glass-panel">
+      <section className="relative pt-16 md:pt-20 pb-12 md:pb-24 overflow-hidden glass-panel">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 w-[800px] h-[800px] bg-gold-main/5 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center max-w-4xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold leading-[1.1] mb-6">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl font-sans font-bold leading-[1.1] mb-4 md:mb-6">
             Мониторинг интеллектуальной собственности
           </h1>
-          <p className="text-xl md:text-2xl font-bold text-text-main mb-8 leading-relaxed">
+          <p className="text-base md:text-2xl font-bold text-text-main mb-6 md:mb-8 leading-relaxed">
             Комплексное наблюдение за патентными базами, реестрами и открытыми источниками с целью контроля использования ваших активов и выявления потенциальных угроз для бизнеса.
           </p>
           <Button size="lg" asChild>
@@ -31,7 +31,7 @@ export default function MonitoringPage() {
       </section>
 
       {/* INTRODUCTION */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <div className="prose prose-invert prose-lg max-w-none text-text-muted leading-relaxed">
@@ -46,7 +46,7 @@ export default function MonitoringPage() {
       </section>
 
       {/* WHO NEEDS IT */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader label="Целевая аудитория" title="Кому и зачем это нужно?" />
@@ -58,13 +58,13 @@ export default function MonitoringPage() {
               { icon: Search, title: "Вы хотите пресечь «паразитирование»", desc: "Своевременно выявлять сайты, домены или фирменные наименования, сходные с вашими." },
               { icon: Clock, title: "Вы цените своё время", desc: "Предпочитаете получать готовые отчёты вместо часов самостоятельного поиска." }
             ].map((item, i) => (
-              <div key={i} className="glass-card p-8 rounded-3xl border border-white/5 flex gap-6">
-                <div className="w-12 h-12 rounded-3xl bg-gold-main/10 flex items-center justify-center shrink-0">
-                  <item.icon className="w-6 h-6 text-gold-main" />
+              <div key={i} className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 flex flex-col md:flex-row gap-4 md:gap-6">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl md:rounded-3xl bg-gold-main/10 flex items-center justify-center shrink-0">
+                  <item.icon className="w-5 h-5 md:w-6 md:h-6 text-gold-main" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-sans font-bold mb-2">{item.title}</h3>
-                  <p className="text-text-muted leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg md:text-xl font-sans font-bold mb-1 md:mb-2">{item.title}</h3>
+                  <p className="text-sm md:text-base text-text-muted leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -73,7 +73,7 @@ export default function MonitoringPage() {
       </section>
 
       {/* WHAT WE TRACK */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <SectionHeader label="Объекты" title="Что мы отслеживаем?" />
@@ -99,7 +99,7 @@ export default function MonitoringPage() {
       </section>
 
       {/* DIRECTIONS */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader label="Направления" title="Наши направления мониторинга" />
@@ -121,7 +121,7 @@ export default function MonitoringPage() {
       </section>
 
       {/* WHAT'S INCLUDED */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <SectionHeader label="Состав услуги" title="Что входит в услугу?" />
@@ -147,7 +147,7 @@ export default function MonitoringPage() {
       </section>
 
       {/* HOW WE WORK */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader label="Процесс" title="Как мы работаем: 3 шага" />
@@ -173,7 +173,7 @@ export default function MonitoringPage() {
       </section>
 
       {/* CTA FORM */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
           <div className="glass-card p-8 md:p-12 rounded-3xl border border-gold-main/20 shadow-2xl">

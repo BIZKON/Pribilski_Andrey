@@ -12,16 +12,16 @@ export default function ViolationsPage() {
   return (
     <div className="flex flex-col min-h-screen gap-6 md:gap-8">
       {/* HERO SECTION */}
-      <section className="relative pt-20 pb-24 overflow-hidden glass-panel">
+      <section className="relative pt-16 md:pt-20 pb-12 md:pb-24 overflow-hidden glass-panel">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 w-[800px] h-[800px] bg-gold-main/5 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center max-w-4xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold leading-[1.1] mb-6">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl font-sans font-bold leading-[1.1] mb-4 md:mb-6">
             Выявление нарушения исключительных прав
           </h1>
-          <p className="text-xl md:text-2xl font-bold text-text-main mb-8 leading-relaxed">
+          <p className="text-base md:text-2xl font-bold text-text-main mb-6 md:mb-8 leading-relaxed">
             Профессиональное наблюдение за действиями конкурентов и состоянием рынка, позволяющее своевременно выявить незаконное использование ваших товарных знаков, патентов или дизайна.
           </p>
           <Button size="lg" asChild>
@@ -31,7 +31,7 @@ export default function ViolationsPage() {
       </section>
 
       {/* INTRODUCTION */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <div className="prose prose-invert prose-lg max-w-none text-text-muted leading-relaxed">
@@ -46,7 +46,7 @@ export default function ViolationsPage() {
       </section>
 
       {/* WHO NEEDS IT */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader label="Целевая аудитория" title="Кому и зачем это нужно?" />
@@ -71,7 +71,7 @@ export default function ViolationsPage() {
       </section>
 
       {/* WHAT WE LOOK FOR */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <SectionHeader label="Объекты поиска" title="Что мы ищем?" />
@@ -104,7 +104,7 @@ export default function ViolationsPage() {
       </section>
 
       {/* WHERE WE LOOK */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <SectionHeader label="Источники" title="Где мы ищем?" />
@@ -132,7 +132,7 @@ export default function ViolationsPage() {
       </section>
 
       {/* WHAT'S INCLUDED */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <SectionHeader label="Состав услуги" title="Что входит в услугу?" />
@@ -154,7 +154,7 @@ export default function ViolationsPage() {
       </section>
 
       {/* HOW WE WORK */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <SectionHeader label="Процесс" title="Как мы работаем" />
@@ -180,7 +180,7 @@ export default function ViolationsPage() {
       </section>
 
       {/* CTA FORM */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
           <div className="glass-card p-8 md:p-12 rounded-3xl border border-gold-main/20 shadow-2xl">
