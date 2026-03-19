@@ -346,26 +346,26 @@ export default function Home() {
                 <div className="text-gold-main/40 text-3xl md:text-4xl font-serif absolute top-4 md:top-6 left-4 md:left-6 leading-none">"</div>
                 
                 <div className="pt-4 mb-4 md:mb-6">
-                  <h3 className="font-serif text-base md:text-lg text-white mb-2 md:mb-3">{item.name}</h3>
+                  <h3 className="font-serif text-base md:text-lg text-text-main mb-2 md:mb-3">{item.name}</h3>
                   <span className="inline-block px-2 md:px-3 py-1 rounded-full border border-gold-main/20 text-gold-main font-mono text-[10px] md:text-xs">{item.type}</span>
                 </div>
                 
-                <p className="font-sans italic text-sm md:text-[15px] text-white/70 leading-relaxed mb-4 md:mb-8 flex-grow">
+                <p className="font-sans italic text-sm md:text-[15px] text-text-muted leading-relaxed mb-4 md:mb-8 flex-grow">
                   «{item.quote}»
                 </p>
                 
-                <div className="font-mono text-[10px] md:text-xs text-text-muted mt-auto pt-3 md:pt-4 border-t border-white/5">
+                <div className="font-mono text-[10px] md:text-xs text-text-muted mt-auto pt-3 md:pt-4 border-t border-[var(--text-dim)]">
                   {item.author}
                 </div>
               </div>
             ))}
           </div>
           
-          <div className="mt-16 pt-12 border-t border-white/5">
+          <div className="mt-16 pt-12 border-t border-[var(--text-dim)]">
             <h4 className="text-center text-sm text-text-muted uppercase tracking-wider mb-8">Среди наших клиентов</h4>
             <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 md:gap-x-12">
               {['Банк ЗЕНИТ', 'Bank NBT', 'Лига мечты', 'ННПФ', 'СкайТрак', 'Открытые документы', 'A Wish', 'МОНОТЕКСТРОЙ'].map((client, i) => (
-                <span key={i} className="text-lg md:text-xl font-serif font-bold text-white/50 hover:text-white transition-colors cursor-default">
+                <span key={i} className="text-lg md:text-xl font-serif font-bold text-text-dim hover:text-text-main transition-colors cursor-default">
                   {client}
                 </span>
               ))}
