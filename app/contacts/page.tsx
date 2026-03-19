@@ -99,73 +99,27 @@ export default function ContactsPage() {
                 <h3 className="text-xl font-bold mb-4">Реквизиты компании</h3>
                 <div className="text-sm text-text-muted space-y-2 font-mono">
                   <p>ИП Прибыльский Андрей Вацлавович</p>
-                  <p>ИНН: уточняйте по запросу</p>
-                  <p>ОГРНИП: уточняйте по запросу</p>
+                  <p>ИНН: 501207966903</p>
+                  <p>ОГРНИП: 316501200054241</p>
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="glass-card p-5 md:p-10 rounded-2xl md:rounded-3xl border border-gold-main/20 shadow-2xl h-fit md:sticky md:top-32">
-              <h2 className="text-2xl font-sans font-bold mb-2">Написать нам</h2>
-              <p className="text-text-muted mb-8">Заполните форму, и наш специалист свяжется с вами в течение 30 минут в рабочее время.</p>
-              
-              <form className="space-y-6">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium text-text-muted">Ваше имя *</label>
-                  <input type="text" id="name" required className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-text-main focus:outline-none focus:border-gold-main transition-colors" placeholder="Иван Иванов" />
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm font-medium text-text-muted">Телефон *</label>
-                  <input type="tel" id="phone" required className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-text-main focus:outline-none focus:border-gold-main transition-colors" placeholder="+7 (999) 000-00-00" />
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium text-text-muted">Email</label>
-                  <input type="email" id="email" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-text-main focus:outline-none focus:border-gold-main transition-colors" placeholder="ivan@example.com" />
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="service" className="text-sm font-medium text-text-muted">Интересующая услуга</label>
-                  <select id="service" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-text-main focus:outline-none focus:border-gold-main transition-colors appearance-none">
-                    <option value="">Выберите услугу...</option>
-                    <option value="monitoring">Мониторинг ИС</option>
-                    <option value="violations">Выявление нарушений</option>
-                    <option value="litigation">Судебная защита</option>
-                    <option value="deadlines">Контроль сроков</option>
-                    <option value="other">Другое / Консультация</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium text-text-muted">Сообщение</label>
-                  <textarea id="message" rows={4} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-text-main focus:outline-none focus:border-gold-main transition-colors resize-none" placeholder="Кратко опишите вашу задачу или задайте вопрос"></textarea>
-                </div>
-                
-                <div className="text-xs text-text-muted">
-                  Нажимая кнопку «Отправить», вы соглашаетесь с <a href="/personal-data" className="text-gold-main hover:underline">Политикой обработки персональных данных</a>.
-                </div>
-
-                <Button type="button" size="lg" className="w-full">
+            {/* Contact CTA */}
+            <div className="glass-card p-5 md:p-10 rounded-2xl md:rounded-3xl border border-gold-main/20 shadow-2xl h-fit md:sticky md:top-32 flex flex-col items-center text-center gap-6">
+              <h2 className="text-2xl font-sans font-bold">Написать нам</h2>
+              <p className="text-text-muted">Свяжитесь с нами напрямую в Telegram для оперативной консультации.</p>
+              <Button size="lg" className="w-full" asChild>
+                <a href="https://t.me/patentattorney1554" target="_blank" rel="noopener noreferrer">
                   Отправить заявку <Send className="ml-2 w-5 h-5" />
-                </Button>
-              </form>
+                </a>
+              </Button>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* MAP SECTION (Placeholder) */}
-      <section className="h-[400px] glass-panel relative flex items-center justify-center">
-        <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-gold-main/20 to-transparent" />
-        <div className="relative z-10 text-center">
-          <MapPin className="w-12 h-12 text-gold-main mx-auto mb-4" />
-          <h3 className="text-2xl font-sans font-bold mb-2">Ждем вас в нашем офисе</h3>
-          <p className="text-text-muted">г. Москва, ул. Каргопольская, д. 6</p>
-        </div>
-      </section>
     </div>
   );
 }
