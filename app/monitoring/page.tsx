@@ -176,33 +176,14 @@ export default function MonitoringPage() {
       <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-          <div className="glass-card p-8 md:p-12 rounded-3xl border border-gold-main/20 shadow-2xl">
-            <h2 className="text-3xl font-sans font-bold mb-2 text-center">Отправить запрос на мониторинг</h2>
-            <p className="text-text-muted text-center mb-8">Оставьте заявку, и мы свяжемся с вами для обсуждения деталей.</p>
-            
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium text-text-muted">Имя</label>
-                  <input type="text" id="name" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-text-main focus:outline-none focus:border-gold-main transition-colors" placeholder="Иван Иванов" />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm font-medium text-text-muted">Телефон</label>
-                  <input type="tel" id="phone" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-text-main focus:outline-none focus:border-gold-main transition-colors" placeholder="+7 (999) 000-00-00" />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium text-text-muted">Email</label>
-                <input type="email" id="email" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-text-main focus:outline-none focus:border-gold-main transition-colors" placeholder="ivan@example.com" />
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium text-text-muted">Описание задачи</label>
-                <textarea id="message" rows={4} className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-text-main focus:outline-none focus:border-gold-main transition-colors resize-none" placeholder="Расскажите о вашей ситуации"></textarea>
-              </div>
-              <Button type="button" size="lg" className="w-full">
-                Отправить запрос <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </form>
+          <div className="glass-card p-8 md:p-12 rounded-3xl border border-gold-main/20 shadow-2xl text-center">
+            <h2 className="text-3xl font-sans font-bold mb-2">Отправить запрос на мониторинг</h2>
+            <p className="text-text-muted mb-8">Свяжитесь с нами в Telegram для обсуждения деталей.</p>
+            <Button size="lg" className="w-full" asChild>
+              <a href="https://t.me/patentattorney1554" target="_blank" rel="noopener noreferrer">
+                Отправить заявку <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+            </Button>
           </div>
         </div>
       </section>
