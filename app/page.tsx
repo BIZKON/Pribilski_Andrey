@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen gap-6 md:gap-8">
       {/* HERO SECTION */}
-      <section className="relative pt-20 pb-32 overflow-hidden glass-panel">
+      <section className="relative pt-16 md:pt-20 pb-16 md:pb-32 overflow-hidden glass-panel">
         {/* Background Gradients & Grid */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-gold-main/5 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
@@ -24,13 +24,13 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                 <span className="text-xs font-mono text-text-muted">Патентные поверенные РФ • С 2016 года</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold leading-[1.1] mb-6">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-sans font-bold leading-[1.1] mb-4 md:mb-6">
                 Ваш бренд копируют прямо сейчас — мы это <span className="text-gold-main">остановим</span>
               </h1>
-              <p className="text-lg md:text-xl text-text-muted mb-10 leading-relaxed max-w-2xl">
+              <p className="text-base md:text-xl text-text-muted mb-6 md:mb-10 leading-relaxed max-w-2xl">
                 Мониторинг, выявление нарушений и судебная защита товарных знаков, патентов и авторских прав. Полный цикл — от обнаружения до взыскания компенсации.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-16">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-16">
                 <Button size="lg" asChild>
                   <Link href="/contacts">Бесплатная консультация <ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
@@ -39,22 +39,22 @@ export default function Home() {
                 </Button>
               </div>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/10">
-                <div>
-                  <div className="text-3xl font-sans font-bold text-gold-main mb-1">3 500+</div>
-                  <div className="text-xs text-text-muted uppercase tracking-wider">объектов ИС зарегистрировано</div>
+              <div className="grid grid-cols-2 gap-4 md:gap-6 pt-8 border-t border-white/10">
+                <div className="text-center md:text-left">
+                  <div className="text-2xl md:text-3xl font-sans font-bold text-gold-main mb-1">3 500+</div>
+                  <div className="text-[10px] md:text-xs text-text-muted uppercase tracking-wider">объектов ИС зарегистрировано</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-sans font-bold text-gold-main mb-1">С 2006</div>
-                  <div className="text-xs text-text-muted uppercase tracking-wider">года работаем с интеллектуальной собственностью</div>
+                <div className="text-center md:text-left">
+                  <div className="text-2xl md:text-3xl font-sans font-bold text-gold-main mb-1">С 2006</div>
+                  <div className="text-[10px] md:text-xs text-text-muted uppercase tracking-wider">года работаем с ИС</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-sans font-bold text-gold-main mb-1">87%</div>
-                  <div className="text-xs text-text-muted uppercase tracking-wider">клиентов обращаются повторно</div>
+                <div className="text-center md:text-left">
+                  <div className="text-2xl md:text-3xl font-sans font-bold text-gold-main mb-1">87%</div>
+                  <div className="text-[10px] md:text-xs text-text-muted uppercase tracking-wider">клиентов обращаются повторно</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-sans font-bold text-gold-main mb-1">ТОП-10</div>
-                  <div className="text-xs text-text-muted uppercase tracking-wider">рейтинга Роспатента по заявкам</div>
+                <div className="text-center md:text-left">
+                  <div className="text-2xl md:text-3xl font-sans font-bold text-gold-main mb-1">ТОП-10</div>
+                  <div className="text-[10px] md:text-xs text-text-muted uppercase tracking-wider">рейтинга Роспатента</div>
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* PAIN TRIGGER SECTION */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
@@ -83,12 +83,12 @@ export default function Home() {
               { icon: Scale, title: "Конкурент зарегистрировал обозначение, похожее на ваше", desc: "Чем дольше он работает под сходным знаком, тем сложнее доказать ваш приоритет." },
               { icon: FileText, title: "Вы получили претензию о нарушении чужих прав", desc: "Без профессиональной защиты штраф может достигать 5 миллионов рублей за каждый случай." }
             ].map((item, i) => (
-              <div key={i} className="glass-card p-8 rounded-3xl border border-white/5 hover:border-gold-main/50 transition-colors group">
-                <div className="w-12 h-12 rounded-3xl bg-gold-main/10 flex items-center justify-center mb-6 group-hover:bg-gold-main/20 transition-colors">
-                  <item.icon className="w-6 h-6 text-gold-main" />
+              <div key={i} className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-gold-main/50 transition-colors group">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl md:rounded-3xl bg-gold-main/10 flex items-center justify-center mb-4 md:mb-6 group-hover:bg-gold-main/20 transition-colors">
+                  <item.icon className="w-5 h-5 md:w-6 md:h-6 text-gold-main" />
                 </div>
-                <h3 className="text-xl font-sans font-bold mb-3">{item.title}</h3>
-                <p className="text-text-muted leading-relaxed">{item.desc}</p>
+                <h3 className="text-lg md:text-xl font-sans font-bold mb-2 md:mb-3">{item.title}</h3>
+                <p className="text-sm md:text-base text-text-muted leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -105,7 +105,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES SECTION */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
@@ -121,13 +121,13 @@ export default function Home() {
               { href: "/deadlines", icon: Clock, title: "Контроль сроков действия", desc: "Системное отслеживание сроков и своевременная подача заявлений о продлении. Ни один актив не будет утрачен по формальной причине." }
             ].map((item, i) => (
               <Link key={i} href={item.href} className="block group">
-                <div className="glass-card p-8 rounded-3xl border border-white/5 hover:border-gold-main transition-all duration-300 h-full flex flex-col">
-                  <div className="w-14 h-14 rounded-2xl bg-[#cd7f32]/10 border border-white/10 flex items-center justify-center mb-6 group-hover:border-gold-main/50 transition-colors">
-                    <item.icon className="w-7 h-7 text-gold-main" />
+                <div className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-gold-main transition-all duration-300 h-full flex flex-col">
+                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[#cd7f32]/10 border border-white/10 flex items-center justify-center mb-4 md:mb-6 group-hover:border-gold-main/50 transition-colors">
+                    <item.icon className="w-6 h-6 md:w-7 md:h-7 text-gold-main" />
                   </div>
-                  <h3 className="text-2xl font-sans font-bold mb-4 group-hover:text-gold-main transition-colors">{item.title}</h3>
-                  <p className="text-text-muted leading-relaxed mb-8 flex-grow">{item.desc}</p>
-                  <div className="flex items-center text-gold-main font-medium opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                  <h3 className="text-xl md:text-2xl font-sans font-bold mb-3 md:mb-4 group-hover:text-gold-main transition-colors">{item.title}</h3>
+                  <p className="text-sm md:text-base text-text-muted leading-relaxed mb-4 md:mb-8 flex-grow">{item.desc}</p>
+                  <div className="flex items-center text-gold-main font-medium opacity-100 md:opacity-0 md:-translate-x-4 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300">
                     Подробнее <ArrowRight className="ml-2 w-4 h-4" />
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export default function Home() {
       </section>
 
       {/* WHY US SECTION */}
-      <section className="py-24 glass-panel relative overflow-hidden">
+      <section className="py-12 md:py-24 glass-panel relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
@@ -148,7 +148,7 @@ export default function Home() {
           />
           
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               {[
                 { num: "01", title: "Патентный поверенный в команде", desc: "Аккредитованный специалист Роспатента №1554 — не посредник, а тот, кто ведёт ваше дело лично." },
                 { num: "02", title: "Полный цикл «под ключ»", desc: "Мониторинг → выявление → фиксация → претензия → суд → исполнение. Одна команда, без субподрядчиков." },
@@ -157,11 +157,11 @@ export default function Home() {
                 { num: "05", title: "Telegram-бот для сроков", desc: "@fees_prodlenie_bot бесплатно напоминает о продлении ТЗ и уплате пошлин." },
                 { num: "06", title: "Международный охват", desc: "Работаем не только с Роспатентом, но и с ВОИС, EUIPO, USPTO, CNIPA, IPO UK. Мониторим патентные базы по всему миру через PATENTSCOPE и Espacenet." }
               ].map((item, i) => (
-                <div key={i} className="flex gap-6">
-                  <div className="text-3xl font-sans font-bold text-gold-main/50">{item.num}</div>
+                <div key={i} className="flex gap-4 md:gap-6">
+                  <div className="text-2xl md:text-3xl font-sans font-bold text-gold-main/50 shrink-0">{item.num}</div>
                   <div>
-                    <h4 className="text-xl font-bold mb-2">{item.title}</h4>
-                    <p className="text-text-muted">{item.desc}</p>
+                    <h4 className="text-lg md:text-xl font-bold mb-1 md:mb-2">{item.title}</h4>
+                    <p className="text-sm md:text-base text-text-muted">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -187,7 +187,7 @@ export default function Home() {
       </section>
 
       {/* TOOLS AND DATABASES SECTION */}
-      <section className="py-24 bg-[#0a0e1a] relative">
+      <section className="py-12 md:py-24 bg-[#0a0e1a] relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
@@ -196,7 +196,7 @@ export default function Home() {
             subtitle="Мониторинг проводится по первоисточникам — государственным реестрам и международным патентным базам. Не агрегаторы, а прямой доступ к данным ведомств."
           />
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
             {[
               { icon: "🇷🇺", name: "Роспатент (ФИПС)", desc: "Федеральный институт промышленной собственности — главное патентное ведомство России. Реестр товарных знаков, патентов, промышленных образцов.", url: "rospatent.gov.ru", tag: "Россия" },
               { icon: <ShieldCheck className="w-6 h-6 text-gold-main" />, name: "Реестр патентных поверенных", desc: "Наш руководитель — патентный поверенный №1554, аккредитованный Роспатентом. Проверьте статус в официальном реестре.", url: "rospatent.gov.ru/ru/patent-attorneys/1554", tag: "Верификация", link: "https://rospatent.gov.ru/ru/patent-attorneys/1554", btnText: "Проверить →" },
@@ -208,13 +208,13 @@ export default function Home() {
               { icon: <Search className="w-6 h-6 text-gold-main" />, name: "PATENTSCOPE (WIPO)", desc: "Глобальная база патентных документов ВОИС. Поиск по миллионам патентов из 100+ стран мира.", url: "wipo.int/patentscope/", tag: "Поиск патентов" },
               { icon: <Search className="w-6 h-6 text-gold-main" />, name: "Espacenet (EPO)", desc: "Европейская база патентных документов. Доступ к более чем 150 миллионам патентных документов по всему миру.", url: "worldwide.espacenet.com", tag: "Поиск патентов" }
             ].map((item, i) => (
-              <div key={i} className="bg-[#141c2b] p-8 rounded-xl border border-[rgba(200,160,74,0.08)] hover:-translate-y-1 hover:border-gold-main/30 transition-all duration-300 flex flex-col group">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-3xl">{item.icon}</div>
-                  <span className="px-3 py-1 rounded-full border border-gold-main/15 text-gold-main font-mono text-[11px] uppercase tracking-wider">{item.tag}</span>
+              <div key={i} className="bg-[#141c2b] p-5 md:p-8 rounded-xl border border-[rgba(200,160,74,0.08)] hover:-translate-y-1 hover:border-gold-main/30 transition-all duration-300 flex flex-col group">
+                <div className="flex items-start justify-between mb-3 md:mb-4 gap-2">
+                  <div className="text-2xl md:text-3xl">{item.icon}</div>
+                  <span className="px-2 md:px-3 py-1 rounded-full border border-gold-main/15 text-gold-main font-mono text-[10px] md:text-[11px] uppercase tracking-wider shrink-0">{item.tag}</span>
                 </div>
-                <h3 className="text-xl font-sans font-bold mb-3">{item.name}</h3>
-                <p className="text-text-muted text-sm leading-relaxed mb-6 flex-grow">{item.desc}</p>
+                <h3 className="text-lg md:text-xl font-sans font-bold mb-2 md:mb-3">{item.name}</h3>
+                <p className="text-text-muted text-xs md:text-sm leading-relaxed mb-4 md:mb-6 flex-grow">{item.desc}</p>
                 {item.btnText ? (
                   <a href={item.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-4 py-2 bg-gold-main/10 text-gold-main rounded-lg text-sm font-medium hover:bg-gold-main/20 transition-colors mt-auto">
                     {item.btnText}
@@ -235,7 +235,7 @@ export default function Home() {
       </section>
 
       {/* HOW WE WORK SECTION (TIMELINE) */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <SectionHeader 
@@ -244,10 +244,10 @@ export default function Home() {
             subtitle="Каждый этап задокументирован. Вы всегда знаете, что происходит с вашим делом."
           />
           
-          <div className="relative mt-16">
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold-main/50 via-gold-main/20 to-transparent md:-translate-x-1/2" />
+          <div className="relative mt-8 md:mt-16">
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold-main/50 via-gold-main/20 to-transparent md:-translate-x-1/2 hidden md:block" />
             
-            <div className="space-y-12">
+            <div className="space-y-6 md:space-y-12">
               {[
                 { step: "1", icon: MessageSquare, title: "Первичная консультация", time: "В течение 60 минут", desc: "Вы оставляете заявку на сайте или пишете на почту. Мы связываемся с вами для уточнения деталей: какие объекты нужно защитить, что вызывает беспокойство, какие цели вы преследуете.", result: "Понимание задачи и предварительная оценка", free: true },
                 { step: "2", icon: Search, title: "Предварительная проверка", time: "1–8 часов", desc: "Проводим бесплатную проверку вашего объекта по открытым базам Роспатента, ВОИС, EUIPO, USPTO. Подбираем классы МКТУ. Оцениваем перспективы и риски.", result: "Отчёт о текущем состоянии ваших прав", tools: ["Роспатент", "WIPO", "Espacenet"], free: true },
@@ -256,42 +256,64 @@ export default function Home() {
                 { step: "5", icon: ShieldCheck, title: "Фиксация и реагирование", time: "По факту обнаружения", desc: "Выявленные нарушения фиксируются процессуально: нотариальные скриншоты, контрольные закупки, видеозапись. Направляем претензии, жалобы в ФАС, обращения на маркетплейсы. При необходимости — в суд.", result: "Пресечение нарушений и/или взыскание компенсации" },
                 { step: "6", icon: Clock, title: "Контроль и продление", time: "Постоянно", desc: "Контролируем сроки действия всех ваших объектов. За 12, 6 и 3 месяца до истечения — уведомляем. Готовим документы на продление и уплату пошлин. Telegram-бот @fees_prodlenie_bot дублирует напоминания.", result: "Ни один актив не утрачен по формальной причине" }
               ].map((item, i) => (
-                <div key={i} className={`relative flex flex-col md:flex-row items-start ${i % 2 === 0 ? 'md:flex-row-reverse' : ''} gap-8 group`}>
-                  <div className="absolute left-4 md:left-1/2 w-8 h-8 rounded-full bg-gold-main text-navy-deep font-bold flex items-center justify-center -translate-x-1/2 z-10 shadow-[0_0_15px_rgba(200,160,74,0.5)]">
-                    {item.step}
+                <div key={i} className="relative">
+                  {/* Mobile layout - simple card */}
+                  <div className="md:hidden glass-card p-5 rounded-2xl border border-white/5">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-8 h-8 rounded-full bg-gold-main text-navy-deep font-bold text-sm flex items-center justify-center shrink-0">
+                        {item.step}
+                      </div>
+                      <span className="text-xs font-mono text-gold-main">{item.time}</span>
+                      {item.free && (
+                        <span className="px-2 py-0.5 rounded bg-green-500/20 text-green-400 text-[10px] font-medium border border-green-500/20">Бесплатно</span>
+                      )}
+                    </div>
+                    <h3 className="text-lg font-sans font-bold mb-2">{item.title}</h3>
+                    <p className="text-sm text-text-muted leading-relaxed mb-3">{item.desc}</p>
+                    <div className="inline-flex items-center gap-2 text-xs font-medium text-gold-main bg-gold-main/5 px-2 py-1 rounded-lg">
+                      <CheckCircle className="w-3 h-3" />
+                      {item.result}
+                    </div>
                   </div>
                   
-                  <div className="w-full md:w-1/2 pl-12 md:pl-0" />
-                  
-                  <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${i % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 text-left'}`}>
-                    <div className="glass-card p-6 md:p-8 rounded-3xl border border-white/5 hover:border-gold-main/30 transition-colors">
-                      <div className={`flex items-center gap-3 mb-4 ${i % 2 === 0 ? 'md:justify-end' : ''}`}>
-                        <div className="w-10 h-10 rounded-xl bg-gold-main/10 flex items-center justify-center">
-                          <item.icon className="w-5 h-5 text-gold-main" />
-                        </div>
-                        <span className="text-sm font-mono text-gold-main">{item.time}</span>
-                        {item.free && (
-                          <span className="px-2 py-1 rounded bg-green-500/20 text-green-400 text-xs font-medium border border-green-500/20">Бесплатно</span>
-                        )}
-                      </div>
-                      <h3 className="text-xl font-sans font-bold mb-3">{item.title}</h3>
-                      <p className="text-text-muted leading-relaxed mb-4">{item.desc}</p>
-                      
-                      <div className={`flex flex-col gap-3 ${i % 2 === 0 ? 'md:items-end' : 'items-start'}`}>
-                        <div className="inline-flex items-center gap-2 text-sm font-medium text-gold-main bg-gold-main/5 px-3 py-1.5 rounded-lg">
-                          <CheckCircle className="w-4 h-4" />
-                          {item.result}
-                        </div>
-                        
-                        {item.tools && (
-                          <div className={`flex flex-wrap gap-2 mt-2 ${i % 2 === 0 ? 'md:justify-end' : ''}`}>
-                            {item.tools.map((tool, idx) => (
-                              <span key={idx} className="px-2 py-1 rounded-full border border-white/10 text-xs text-text-dim font-mono bg-white/5">
-                                {tool}
-                              </span>
-                            ))}
+                  {/* Desktop layout - timeline */}
+                  <div className={`hidden md:flex flex-row items-start ${i % 2 === 0 ? 'flex-row-reverse' : ''} gap-8 group`}>
+                    <div className="absolute left-1/2 w-8 h-8 rounded-full bg-gold-main text-navy-deep font-bold flex items-center justify-center -translate-x-1/2 z-10 shadow-[0_0_15px_rgba(200,160,74,0.5)]">
+                      {item.step}
+                    </div>
+                    
+                    <div className="w-1/2" />
+                    
+                    <div className={`w-1/2 ${i % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
+                      <div className="glass-card p-8 rounded-3xl border border-white/5 hover:border-gold-main/30 transition-colors">
+                        <div className={`flex items-center gap-3 mb-4 ${i % 2 === 0 ? 'justify-end' : ''}`}>
+                          <div className="w-10 h-10 rounded-xl bg-gold-main/10 flex items-center justify-center">
+                            <item.icon className="w-5 h-5 text-gold-main" />
                           </div>
-                        )}
+                          <span className="text-sm font-mono text-gold-main">{item.time}</span>
+                          {item.free && (
+                            <span className="px-2 py-1 rounded bg-green-500/20 text-green-400 text-xs font-medium border border-green-500/20">Бесплатно</span>
+                          )}
+                        </div>
+                        <h3 className="text-xl font-sans font-bold mb-3">{item.title}</h3>
+                        <p className="text-text-muted leading-relaxed mb-4">{item.desc}</p>
+                        
+                        <div className={`flex flex-col gap-3 ${i % 2 === 0 ? 'items-end' : 'items-start'}`}>
+                          <div className="inline-flex items-center gap-2 text-sm font-medium text-gold-main bg-gold-main/5 px-3 py-1.5 rounded-lg">
+                            <CheckCircle className="w-4 h-4" />
+                            {item.result}
+                          </div>
+                          
+                          {item.tools && (
+                            <div className={`flex flex-wrap gap-2 mt-2 ${i % 2 === 0 ? 'justify-end' : ''}`}>
+                              {item.tools.map((tool, idx) => (
+                                <span key={idx} className="px-2 py-1 rounded-full border border-white/10 text-xs text-text-dim font-mono bg-white/5">
+                                  {tool}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -303,7 +325,7 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS SECTION */}
-      <section className="py-24 bg-[#111827] relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-[#111827] relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
@@ -312,27 +334,27 @@ export default function Home() {
             subtitle="Каждое письмо — результат реальной работы и успешно завершённого проекта"
           />
           
-          <div className="flex overflow-x-auto pb-8 -mx-4 px-4 md:mx-0 md:px-0 gap-6 snap-x hide-scrollbar">
+          <div className="flex overflow-x-auto pb-6 md:pb-8 -mx-4 px-4 md:mx-0 md:px-0 gap-4 md:gap-6 snap-x hide-scrollbar">
             {[
               { name: "АО «Национальный негосударственный пенсионный фонд» (ННПФ)", type: "Регистрация товарного знака", quote: "Выражаем искреннюю благодарность за проявленный профессионализм и компетентность при регистрации товарного знака Фонда", author: "И.О. Акопджанова, Генеральный директор" },
               { name: "АНО «Открытые документы»", type: "Регистрация товарного знака", quote: "Выражаем искреннюю благодарность лично Вам за качественно проделанную работу в рамках регистрации товарного знака «Открытые документы»", author: "А.С. Нескубин, Директор АНО" },
               { name: "ООО «СкайТрак» (SKYTRUCK)", type: "Комплексное сопровождение", quote: "Выражаем благодарность и глубокую признательность за плодотворное сотрудничество с нашей молодой компанией", author: "С.А. Якимов, Генеральный директор" },
               { name: "ИП Жукова В.В. / Магазин «A Wish»", type: "Защита бренда", quote: "Выражаем благодарность и глубокую признательность за плодотворное сотрудничество. Спасибо вам за это!", author: "Жукова В.В., 26 июля 2023 г." }
             ].map((item, i) => (
-              <div key={i} className="min-w-[300px] md:min-w-[400px] w-full max-w-[450px] bg-[#141c2b] p-8 rounded-2xl border border-[rgba(200,160,74,0.12)] relative hover:-translate-y-1 hover:border-gold-main/30 transition-all duration-300 snap-center flex flex-col">
-                <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-gold-main/50 to-transparent" />
-                <div className="text-gold-main/40 text-4xl font-serif absolute top-6 left-6 leading-none">"</div>
+              <div key={i} className="min-w-[280px] md:min-w-[400px] w-full max-w-[450px] bg-[#141c2b] p-5 md:p-8 rounded-2xl border border-[rgba(200,160,74,0.12)] relative hover:-translate-y-1 hover:border-gold-main/30 transition-all duration-300 snap-center flex flex-col">
+                <div className="absolute top-0 left-5 right-5 md:left-8 md:right-8 h-px bg-gradient-to-r from-transparent via-gold-main/50 to-transparent" />
+                <div className="text-gold-main/40 text-3xl md:text-4xl font-serif absolute top-4 md:top-6 left-4 md:left-6 leading-none">"</div>
                 
-                <div className="pt-4 mb-6">
-                  <h3 className="font-serif text-lg text-white mb-3">{item.name}</h3>
-                  <span className="inline-block px-3 py-1 rounded-full border border-gold-main/20 text-gold-main font-mono text-xs">{item.type}</span>
+                <div className="pt-4 mb-4 md:mb-6">
+                  <h3 className="font-serif text-base md:text-lg text-white mb-2 md:mb-3">{item.name}</h3>
+                  <span className="inline-block px-2 md:px-3 py-1 rounded-full border border-gold-main/20 text-gold-main font-mono text-[10px] md:text-xs">{item.type}</span>
                 </div>
                 
-                <p className="font-sans italic text-[15px] text-white/70 leading-relaxed mb-8 flex-grow">
+                <p className="font-sans italic text-sm md:text-[15px] text-white/70 leading-relaxed mb-4 md:mb-8 flex-grow">
                   «{item.quote}»
                 </p>
                 
-                <div className="font-mono text-xs text-text-muted mt-auto pt-4 border-t border-white/5">
+                <div className="font-mono text-[10px] md:text-xs text-text-muted mt-auto pt-3 md:pt-4 border-t border-white/5">
                   {item.author}
                 </div>
               </div>
@@ -353,7 +375,7 @@ export default function Home() {
       </section>
 
       {/* TEAM SECTION */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
@@ -361,11 +383,11 @@ export default function Home() {
             title="Эксперты, которым доверяют бренды" 
           />
           
-          <p className="text-center text-text-muted text-lg max-w-4xl mx-auto mb-16 leading-relaxed">
+          <p className="text-center text-text-muted text-sm md:text-lg max-w-4xl mx-auto mb-8 md:mb-16 leading-relaxed">
             Мы работаем на юридическом рынке 10 лет. За это время сложился устойчивый штат специалистов, которые ведут проекты от первого обращения до финального решения. Каждый сотрудник имеет профильное образование и многолетний опыт работы именно в сфере интеллектуальной собственности.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-16">
             {[
               { 
                 img: "https://cemonip.ru/gallery_gen/2661aed3941aa101abfaa07f02122c13_480x480_4x0_484x483_crop.jpg", 
@@ -411,7 +433,7 @@ export default function Home() {
       </section>
 
       {/* PRICING SECTION */}
-      <section id="pricing" className="py-24 glass-panel relative">
+      <section id="pricing" className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
@@ -420,11 +442,11 @@ export default function Home() {
             subtitle="Выберите подходящий пакет или запросите индивидуальный расчёт. Первая консультация — бесплатно."
           />
           
-          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {/* Basic */}
-            <div className="glass-card p-8 rounded-3xl border border-white/5 flex flex-col md:items-center md:text-center">
-              <h3 className="text-2xl font-sans font-bold mb-2">Мониторинг</h3>
-              <div className="text-3xl font-bold text-gold-main mb-4">от 15 000 <span className="text-lg text-text-muted font-normal">₽/мес</span></div>
+            <div className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 flex flex-col items-center text-center">
+              <h3 className="text-xl md:text-2xl font-sans font-bold mb-2">Мониторинг</h3>
+              <div className="text-2xl md:text-3xl font-bold text-gold-main mb-3 md:mb-4">от 15 000 <span className="text-base md:text-lg text-text-muted font-normal">₽/мес</span></div>
               <p className="text-text-muted mb-8">Регулярное наблюдение за патентными базами и реестрами. Для владельцев 1–3 товарных знаков.</p>
               <ul className="space-y-3 mb-8 flex-grow w-full flex flex-col items-center">
                 {['Ежемесячный мониторинг Роспатента', 'Мониторинг интернет-пространства', 'Мониторинг доменных имён', 'Отчёт с правовой оценкой', 'Консультирование по результатам'].map((li, i) => (
@@ -439,12 +461,12 @@ export default function Home() {
             </div>
             
             {/* Optimal */}
-            <div className="glass-card p-8 rounded-3xl border-2 border-gold-main relative flex flex-col md:items-center md:text-center transform lg:-translate-y-4 shadow-[0_10px_40px_rgba(200,160,74,0.15)]">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gold-main text-navy-deep font-bold px-4 py-1 rounded-full text-sm">
+            <div className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border-2 border-gold-main relative flex flex-col items-center text-center lg:-translate-y-4 shadow-[0_10px_40px_rgba(200,160,74,0.15)]">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gold-main text-navy-deep font-bold px-3 md:px-4 py-1 rounded-full text-xs md:text-sm">
                 Популярный
               </div>
-              <h3 className="text-2xl font-sans font-bold mb-2">Защита «под ключ»</h3>
-              <div className="text-3xl font-bold text-gold-main mb-4">от 45 000 <span className="text-lg text-text-muted font-normal">₽/мес</span></div>
+              <h3 className="text-xl md:text-2xl font-sans font-bold mb-2 mt-2 md:mt-0">Защита «под ключ»</h3>
+              <div className="text-2xl md:text-3xl font-bold text-gold-main mb-3 md:mb-4">от 45 000 <span className="text-base md:text-lg text-text-muted font-normal">₽/мес</span></div>
               <p className="text-text-muted mb-8">Полный цикл: мониторинг + выявление нарушений + досудебная работа. Для активных брендов.</p>
               <ul className="space-y-3 mb-8 flex-grow w-full flex flex-col items-center">
                 {['Всё из пакета «Базовый»', 'Выявление фактов нарушений', 'Контрольные закупки и фиксация', 'Досудебное урегулирование', 'Контроль сроков действия', 'Telegram-бот напоминаний'].map((li, i) => (
@@ -459,9 +481,9 @@ export default function Home() {
             </div>
             
             {/* Maximum */}
-            <div className="glass-card p-8 rounded-3xl border border-white/5 flex flex-col md:items-center md:text-center">
-              <h3 className="text-2xl font-sans font-bold mb-2">Судебная защита</h3>
-              <div className="text-3xl font-bold text-gold-main mb-4">от 100 000 <span className="text-lg text-text-muted font-normal">₽/проект</span></div>
+            <div className="glass-card p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 flex flex-col items-center text-center">
+              <h3 className="text-xl md:text-2xl font-sans font-bold mb-2">Судебная защита</h3>
+              <div className="text-2xl md:text-3xl font-bold text-gold-main mb-3 md:mb-4">от 100 000 <span className="text-base md:text-lg text-text-muted font-normal">₽/проект</span></div>
               <p className="text-text-muted mb-8">Суды всех инстанций, взыскание компенсаций, исполнение решений.</p>
               <ul className="space-y-3 mb-8 flex-grow w-full flex flex-col items-center">
                 {['Разработка правовой стратегии', 'Подготовка процессуальных документов', 'Представительство в суде', 'Жалобы в ФАС и Роспатент', 'Исполнение судебных актов', 'Взыскание компенсаций'].map((li, i) => (
@@ -479,7 +501,7 @@ export default function Home() {
       </section>
 
       {/* FAQ SECTION */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <SectionHeader 
@@ -506,15 +528,15 @@ export default function Home() {
       </section>
 
       {/* TELEGRAM BOT PROMO */}
-      <section className="py-12 glass-panel relative">
+      <section className="py-8 md:py-12 glass-panel relative">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="bg-gradient-to-r from-navy-section to-navy-card rounded-3xl border border-gold-main/30 p-8 md:p-12 flex flex-col items-center gap-8 text-center shadow-2xl">
-            <div className="w-20 h-20 rounded-3xl bg-gold-main/20 border border-gold-main/50 flex items-center justify-center shrink-0">
-              <MessageSquare className="w-10 h-10 text-gold-main" />
+          <div className="bg-gradient-to-r from-navy-section to-navy-card rounded-2xl md:rounded-3xl border border-gold-main/30 p-5 md:p-12 flex flex-col items-center gap-4 md:gap-8 text-center shadow-2xl">
+            <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-gold-main/20 border border-gold-main/50 flex items-center justify-center shrink-0">
+              <MessageSquare className="w-7 h-7 md:w-10 md:h-10 text-gold-main" />
             </div>
             <div className="w-full max-w-2xl mx-auto flex flex-col items-center">
-              <h3 className="text-2xl md:text-4xl font-sans font-bold mb-4">Telegram-бот для контроля сроков</h3>
-              <p className="text-text-muted mb-8 max-w-xl mx-auto text-lg">Бот @fees_prodlenie_bot — бесплатный инструмент. Напомнит о продлении ТЗ, сообщит о пошлинах, предоставит реквизиты.</p>
+              <h3 className="text-xl md:text-4xl font-sans font-bold mb-2 md:mb-4">Telegram-бот для контроля сроков</h3>
+              <p className="text-text-muted mb-4 md:mb-8 max-w-xl mx-auto text-sm md:text-lg">Бот @fees_prodlenie_bot — бесплатный инструмент. Напомнит о продлении ТЗ, сообщит о пошлинах, предоставит реквизиты.</p>
               <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-3 md:gap-4 w-full">
                 {['Напоминания', 'Реквизиты', 'Инструкции', 'Бесплатно'].map((tag, i) => (
                   <span key={i} className="px-4 py-2 rounded-xl md:rounded-full bg-[#cd7f32]/10 border border-white/10 text-sm font-mono text-gold-main flex items-center justify-center">

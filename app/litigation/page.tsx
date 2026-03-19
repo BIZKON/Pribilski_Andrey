@@ -12,16 +12,16 @@ export default function LitigationPage() {
   return (
     <div className="flex flex-col min-h-screen gap-6 md:gap-8">
       {/* HERO SECTION */}
-      <section className="relative pt-20 pb-24 overflow-hidden glass-panel">
+      <section className="relative pt-16 md:pt-20 pb-12 md:pb-24 overflow-hidden glass-panel">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 w-[800px] h-[800px] bg-gold-main/5 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center max-w-4xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold leading-[1.1] mb-6">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl font-sans font-bold leading-[1.1] mb-4 md:mb-6">
             Судебная защита и споры
           </h1>
-          <p className="text-xl md:text-2xl font-bold text-text-main mb-8 leading-relaxed">
+          <p className="text-base md:text-2xl font-bold text-text-main mb-6 md:mb-8 leading-relaxed">
             Профессиональное представительство в Суде по интеллектуальным правам, арбитражных судах, Палате по патентным спорам и ФАС. Защищаем ваши активы и взыскиваем компенсации.
           </p>
           <Button size="lg" asChild>
@@ -31,7 +31,7 @@ export default function LitigationPage() {
       </section>
 
       {/* INTRODUCTION */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <div className="prose prose-invert prose-lg max-w-none text-text-muted leading-relaxed">
@@ -46,7 +46,7 @@ export default function LitigationPage() {
       </section>
 
       {/* WHO NEEDS IT */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader label="Ситуации" title="Когда нужна судебная защита?" />
@@ -73,7 +73,7 @@ export default function LitigationPage() {
       </section>
 
       {/* OUR SERVICES */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           <SectionHeader label="Услуги" title="Наши направления защиты" />
@@ -82,7 +82,7 @@ export default function LitigationPage() {
             {[
               { title: "Досудебное урегулирование", desc: "Подготовка и направление претензий нарушителям. Переговоры с целью мирного разрешения спора, заключения лицензионного договора или выплаты компенсации без суда." },
               { title: "Суд по интеллектуальным правам (СИП) и Арбитраж", desc: "Подготовка исковых заявлений, отзывов, ходатайств. Представительство в судах всех инстанций по делам о защите исключительных прав, оспаривании решений Роспатента, досрочном прекращении охраны ТЗ." },
-              { title: "Палата по патентным спорам (ППС)", desc: "Оспаривание отказов в регистрации ТЗ. Подача возражений против предоставления правовой охраны товарным знакам и патентам конкурентов." },
+              { title: "Палата по патентным спорам (ППС)", desc: "Оспаривание отказов в регистрации ТЗ. Подача возражений против предоставления правовой охраны товарным знакам и патентам к��нкурентов." },
               { title: "Федеральная антимонопольная служба (ФАС)", desc: "Подготовка заявлений о признании действий конкурента актом недобросовестной конкуренции (статья 14.4 Закона о защите конкуренции)." }
             ].map((item, i) => (
               <div key={i} className="flex gap-6 items-start glass-card p-6 rounded-2xl border border-white/5 hover:border-gold-main/30 transition-colors">
@@ -98,7 +98,7 @@ export default function LitigationPage() {
       </section>
 
       {/* WHAT'S INCLUDED */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <SectionHeader label="Состав услуги" title="Что входит в ведение дела?" />
@@ -127,7 +127,7 @@ export default function LitigationPage() {
       </section>
 
       {/* CTA FORM */}
-      <section className="py-24 glass-panel relative">
+      <section className="py-12 md:py-24 glass-panel relative">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
           <div className="glass-card p-8 md:p-12 rounded-3xl border border-gold-main/20 shadow-2xl">
