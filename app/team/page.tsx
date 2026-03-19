@@ -62,7 +62,7 @@ export default function TeamPage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, i) => (
-              <div key={i} className="glass-card rounded-3xl border border-white/5 overflow-hidden group hover:border-gold-main/30 transition-all duration-300 flex flex-col h-full">
+              <div key={i} className="glass-card rounded-3xl border border-[var(--border-main)] overflow-hidden group hover:border-gold-main/30 transition-all duration-300 flex flex-col h-full">
                 <div className="relative h-80 w-full overflow-hidden">
                   <Image 
                     src={member.image} 
@@ -73,7 +73,7 @@ export default function TeamPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                   <div className="absolute bottom-4 left-6 right-6">
-                    <h3 className="text-2xl font-sans font-bold text-white mb-1">{member.name}</h3>
+                    <h3 className="text-2xl font-sans font-bold text-text-main mb-1">{member.name}</h3>
                     <p className="text-gold-main font-medium text-sm">{member.role}</p>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ export default function TeamPage() {
       </section>
 
       {/* CLIENTS SECTION */}
-      <section className="py-12 md:py-24 bg-[#111827] relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-[var(--bg-section)] relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 gold-gradient-line" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
@@ -127,7 +127,7 @@ export default function TeamPage() {
           <div className="mb-16">
             <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 md:gap-x-12">
               {['Банк ЗЕНИТ', 'Bank NBT', 'АНО «Лига мечты»', 'ННПФ', 'СкайТрак', 'Открытые документы', 'A Wish', 'МОНОТЕКСТРОЙ', 'ПРОЗДОРОВЬЕ', 'Страховая компания «Турикум»'].map((client, i) => (
-                <span key={i} className="text-lg md:text-xl font-serif font-bold text-white/50 hover:text-white transition-colors cursor-default">
+                <span key={i} className="text-lg md:text-xl font-serif font-bold text-text-main/50 hover:text-text-main transition-colors cursor-default">
                   {client}
                 </span>
               ))}
@@ -140,19 +140,19 @@ export default function TeamPage() {
               {[
                 { name: "АО «Национальный негосударственный пенсионный фонд» (ННПФ)", type: "Регистрация товарного знака", quote: "Выражаем искреннюю благодарность за проявленный профессионализм и компетентность при регистрации товарного знака Фонда", author: "И.О. Акопджанова, Генеральный директор" },
                 { name: "АНО «Открытые документы»", type: "Регистрация товарного знака", quote: "Выражаем искреннюю благодарность лично Вам за качественно проделанную работу в рамках регистрации товарного знака «Открытые документы»", author: "А.С. Нескубин, Директор АНО" },
-                { name: "ООО «СкайТрак» (SKYTRUCK)", type: "Комплексное сопровождение", quote: "Выражаем благодарность и глубокую признательность за плодотворное сотрудничество с нашей молодой компанией", author: "С.А. Якимов, Генеральный директор" },
+                { name: "ООО «СкайТрак» (SKYTRUCK)", type: "Комплексное сопровождение", quote: "Выражаем благодарность и глубокую признательность за плодотворное сотрудничество с нашей ��олодой компанией", author: "С.А. Якимов, Генеральный директор" },
                 { name: "ИП Жукова В.В. / Магазин «A Wish»", type: "Защита бренда", quote: "Выражаем благодарность и глубокую признательность за плодотворное сотрудничество. Спасибо вам за это!", author: "Жукова В.В., 26 июля 2023 г." }
               ].map((item, i) => (
-                <div key={i} className="min-w-[300px] md:min-w-[400px] w-full max-w-[450px] bg-[#141c2b] p-8 rounded-2xl border border-[rgba(200,160,74,0.12)] relative hover:-translate-y-1 hover:border-gold-main/30 transition-all duration-300 snap-center flex flex-col">
+                <div key={i} className="min-w-[300px] md:min-w-[400px] w-full max-w-[450px] bg-[var(--bg-card)] p-8 rounded-2xl border border-[var(--border-main)] relative hover:-translate-y-1 hover:border-gold-main/30 transition-all duration-300 snap-center flex flex-col">
                   <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-gold-main/50 to-transparent" />
                   <div className="text-gold-main/40 text-4xl font-serif absolute top-6 left-6 leading-none">"</div>
                   
                   <div className="pt-4 mb-6">
-                    <h3 className="font-serif text-lg text-white mb-3">{item.name}</h3>
+                    <h3 className="font-serif text-lg text-text-main mb-3">{item.name}</h3>
                     <span className="inline-block px-3 py-1 rounded-full border border-gold-main/20 text-gold-main font-mono text-xs">{item.type}</span>
                   </div>
                   
-                  <p className="font-sans italic text-[15px] text-white/70 leading-relaxed mb-8 flex-grow">
+                  <p className="font-sans italic text-[15px] text-text-main/70 leading-relaxed mb-8 flex-grow">
                     «{item.quote}»
                   </p>
                   
@@ -179,7 +179,7 @@ export default function TeamPage() {
               { title: "Прозрачность", desc: "Вы всегда знаете, за что платите. Мы честно оцениваем перспективы дела на первой консультации и не обещаем невозможного." },
               { title: "Конфиденциальность", desc: "Информация о ваших разработках, планах и коммерческих тайнах надежно защищена. Мы подписываем NDA до начала обсуждения деталей проекта." }
             ].map((item, i) => (
-              <div key={i} className="glass-card p-8 rounded-3xl border border-white/5">
+              <div key={i} className="glass-card p-8 rounded-3xl border border-[var(--border-main)]">
                 <h3 className="text-xl font-sans font-bold mb-4 text-gold-main">{item.title}</h3>
                 <p className="text-text-muted leading-relaxed">{item.desc}</p>
               </div>

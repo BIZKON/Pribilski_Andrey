@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { Menu, X, Shield } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { usePathname } from 'next/navigation';
 
@@ -41,11 +42,15 @@ export function Navbar() {
     >
       <div className={`mx-auto transition-all duration-300 ${isScrolled ? 'glass-nav rounded-full px-6 py-3' : 'bg-transparent px-2 py-4'}`}>
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-gold-main/10 border border-gold-main/30 flex items-center justify-center group-hover:border-gold-main transition-colors">
-              <span className="font-sans font-bold text-gold-main text-xl">IP</span>
-            </div>
-            <span className="font-sans font-bold text-xl tracking-wide text-text-main">ЦЕМОНИП</span>
+          <Link href="/" className="flex items-center gap-2 md:gap-3 group">
+            <Image 
+              src="/images/logo.png" 
+              alt="ЦЕМОНИП" 
+              width={40} 
+              height={40} 
+              className="w-9 h-9 md:w-10 md:h-10 object-contain"
+            />
+            <span className="font-sans font-bold text-lg md:text-xl tracking-wide text-text-main">ЦЕМОНИП</span>
           </Link>
 
           {/* Desktop Nav */}
